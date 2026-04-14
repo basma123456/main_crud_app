@@ -6,14 +6,30 @@ use App\Http\Controllers\Admin\ModuleController;
 use App\Http\Controllers\Admin\PostController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 //Route::view('/', 'welcome')->name('home');
 
-Route::middleware(['auth', 'verified'])->group(function () {
+//Route::middleware(['auth', 'verified'])->group(function () {
 //    Route::view('dashboard', 'dashboard')->name('dashboard');
+
+
+//});
+
+Route::get('test', function () {
+    return view('admin/pages/list');
+});
+
+
+
+Route::group(
+    [
+        'prefix' => LaravelLocalization::setLocale().'/admin',
+        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' , 'auth', 'verified' ]
+    ], function(){ //...
+
     Route::get('module/{title}', [ModuleController::class, 'show'])->name('module.show');
     Route::get('module/{title}/{status}', [ModuleController::class, 'showByActiveOrDeactive'])->name('module.show.param');
-
 
 
     Route::get('posts_gallery/{module}/{post}', [GalleryController::class, 'index'])->name('posts.gallery');
@@ -48,6 +64,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('delete_post/{post}', [PostController::class, 'delete'])->name('delete_post.post');
 
 
+
     Route::get('change_status/{post}', [PostController::class, 'changeStatus'])->name('change_status.post');
 
     /******************categories**********/
@@ -58,10 +75,3 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 
 });
-
-Route::get('test', function () {
-    return view('admin/pages/list');
-});
-
-
-

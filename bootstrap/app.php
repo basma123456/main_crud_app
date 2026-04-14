@@ -12,15 +12,22 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
         then: function ()
             {
-                Route::prefix('admin')
-                    ->middleware('web')
+                Route::
+//                prefix('admin')
+                    middleware('web')
                     ->name('admin.')
                     ->group(base_path('routes/admin.php'));
             },
     )
-    ->withMiddleware(function (Middleware $middleware): void {
-    //
-})
-    ->withExceptions(function (Exceptions $exceptions): void {
+ ->withMiddleware(function (Middleware $middleware) {
+    $middleware->alias([
+        /**** OTHER MIDDLEWARE ALIASES ****/
+        'localize'                => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRoutes::class,
+        'localizationRedirect'    => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter::class,
+        'localeSessionRedirect'   => \Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect::class,
+        'localeCookieRedirect'    => \Mcamara\LaravelLocalization\Middleware\LocaleCookieRedirect::class,
+        'localeViewPath'          => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationViewPath::class,
+    ]);
+})    ->withExceptions(function (Exceptions $exceptions): void {
         //
     })->create();

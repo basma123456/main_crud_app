@@ -38,11 +38,19 @@
                 <div class="card">
                     <div class="card-header border-bottom card-tabs d-flex flex-wrap align-items-center gap-2">
                         <div class="flex-grow-1">
-                            <h4 class="header-title text-black">أخبارنا</h4>
+                            <h4 class="header-title text-black">{{$module->$name}}</h4>
                         </div>
 
                     </div>
-
+                    @if($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     <div class="card-breadcrumb px-3 py-2 shadow-sm">
                         <div class="d-flex align-items-center flex-wrap flex-lg-nowrap gap-2">
 
@@ -55,21 +63,31 @@
                                     <circle cx="1.5" cy="8.5" r=".5"/>
                                     <circle cx="1.5" cy="12.5" r=".5"/>
                                 </svg>
-                                <h4 class="mb-0">عدد السجلات: <span
+                                <h4 class="mb-0"> : @lang('lang.admin.number_of_records')<span
                                         class="fw-bold">{{$posts ? count($posts) : 0}}</span></h4>
                             </div>
 
                             <div class="d-flex align-items-center gap-2 flex-column flex-md-row">
 
-                                <form
+                                <!--------search---------------->
+                                 <form
+
+                                     @isset($status)
+                                     action="{{route('admin.module.show.param' , ['title' => $module->title , 'status' => $status])}}"
+                                     @else
+                                     action="{{route('admin.module.show' , ['title' => $module->title])}}"
+                                     @endisset
+
+
                                     class="submenu-search position-relative d-flex justify-content-center align-items-center gap-2 overflow-hidden cursor-pointer">
 
                                     <input
-                                        type="text"
-                                        placeholder="بحث"
+                                        type="text" name="search"
+                                        value="{{request()->search}}"
+                                        placeholder="@lang('lang.admin.search')"
                                         class="search-input bg-transparent py-1 fs-6"
                                     />
-                                    <button
+                                    <button type="submit"
                                         class="search-icon position-absolute d-flex justify-content-center align-items-center border-0">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                              fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
@@ -78,29 +96,30 @@
                                         </svg>
                                     </button>
                                 </form>
+                                <!--------search---------------->
 
                                 <div class="table-dropdown">
                                     <button class="btn main-btn dropdown-toggle fs-6" type="button"
                                             id="newsDropdown" data-bs-toggle="dropdown">
-                                        التحكم
+                                        @lang('lang.admin.control')
                                         <i class="ri-arrow-down-s-line"></i>
                                     </button>
 
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item fs-6"
-                                               href="{{route('admin.module.show' , ['title' => $module->title  ])}}">عرض
-                                                الكل</a></li>
+                                               href="{{route('admin.module.show' , ['title' => $module->title  ])}}">@lang('lang.admin.show')
+                                                @lang('lang.admin.all')</a></li>
                                         <li><a class="dropdown-item fs-6"
-                                               href="{{route('admin.posts.create' , $module->title)}}">إضافة
-                                                جديد</a></li>
+                                               href="{{route('admin.posts.create' , $module->title)}}">
+                                                @lang('lang.admin.add_new')</a></li>
 
 
                                         <li><a class="dropdown-item fs-6"
-                                               href="{{route('admin.module.show.param' , ['title' => $module->title , 'status' => 'yes'])}}">عرض
-                                                المفعل</a></li>
+                                               href="{{route('admin.module.show.param' , ['title' => $module->title , 'status' => 'yes'])}}">@lang('lang.admin.show')
+                                                @lang('lang.admin.active')</a></li>
                                         <li><a class="dropdown-item fs-6"
-                                               href="{{route('admin.module.show.param' , ['title' => $module->title , 'status' => 'no'])}}">عرض
-                                                غير المفعل</a></li>
+                                               href="{{route('admin.module.show.param' , ['title' => $module->title , 'status' => 'no'])}}">@lang('lang.admin.show')
+                                                @lang('lang.admin.deactive')</a></li>
                                     </ul>
                                 </div>
 
@@ -130,26 +149,26 @@
                                     </th>
 
                                     <th scope="col" width="3%">
-                                        {{ __('backend_lang/custom.state') }}
+                                        @lang('lang.admin.state')
                                     </th> <!-- added code -->
 
                                     @if ($title != 'videos' && $module->have_pic == 'yes')
-                                        <th scope="col">{{ __('backend_lang/custom.pic') }}</th>
+                                        <th scope="col">@lang('lang.admin.photo')</th>
                                     @endif
 
-                                    <th scope="col">{{ __('backend_lang/custom.title') }}</th>
-                                    <th scope="col">{{ __('backend_lang/custom.title') }} AR</th>
+                                    <th scope="col">@lang('lang.admin.title')</th>
+                                    <th scope="col">@lang('lang.admin.title') AR</th>
 
                                     @if ($title == 'news')
-                                        <th scope="col">{{ __('backend_lang/custom.date') }}</th>
+                                        <th scope="col">@lang('lang.admin.date')</th>
                                     @endif
 
                                     @if ($module->have_cats == 'yes')
-                                        <th scope="col">{{ __('backend_lang/custom.category') }}</th>
+                                        <th scope="col">@lang('lang.admin.category')</th>
                                     @endif
                                     {{-- <th scope="col">{{ __('backend_lang/custom.title') }} AR</th> --}}
 
-                                    <th scope="col">{{ __('backend_lang/custom.controls') }}</th>
+                                    <th scope="col">@lang('lang.admin.controls')</th>
 
                                 </tr>
                                 </thead>
@@ -241,7 +260,7 @@
                                                     <a href="{{ route('admin.posts.edit', ['module' => $post->module, 'id' => $post->id]) }}"
                                                        class="btn-fancy btn-edit"
                                                        data-bs-toggle="tooltip"
-                                                       title="تعديل الخبر">
+                                                       title="@lang('lang.admin.edit_post')">
                                                         <i class="ri-edit-box-line"></i>
                                                     </a>
                                                 @endif
@@ -327,7 +346,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        {{ $posts->links()  }}
+                        {{ optional($posts)->links()  }}
 
 
                     @else

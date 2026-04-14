@@ -15,19 +15,46 @@ class PostService
     /**
      * Get module by ID
      */
-    public function getPostsByModuleTitle($title)
+    public function getPostsByModuleTitle($title, $request = null)
     {
-        $posts = Post::whereHas('moduleRelation', function ($q) use ($title) {
+        $query = Post::whereHas('moduleRelation', function ($q) use ($title) {
             $q->where('title', $title);
-        })->with(['category', 'moduleRelation'])->orderBy('p_order', 'desc')->paginate(10);
+        })->with('category');
+
+        if ($request->search) {
+            $query = $query->where(function ($q) use ($request, $title) {
+                $q->where('name_en', 'like', '%' . $request->search . '%')->orWhere('name_ar', 'like', '%' . $request->search . '%')->where('module', $title)
+                    ->orWhereHas('category', function ($q3) use ($request) {
+                        $q3->where('name', 'like', '%' . $request->search . '%')
+                            ->orWhere('name_ar', 'like', '%' . $request->search . '%');
+                    });
+            });
+        }
+        $posts = $query->with('moduleRelation')->orderBy('p_order', 'desc')->paginate(10)->appends([
+            'search' => $request->search
+        ]);
+
         return $posts;
     }
 
-    public function getPostsByModuleTitleActiveOrDeactiveParam($title, $status)
+    public function getPostsByModuleTitleActiveOrDeactiveParam($title, $status, $request)
     {
-        $posts = Post::whereHas('moduleRelation', function ($q) use ($title) {
+        $query = Post::whereHas('moduleRelation', function ($q) use ($title) {
             $q->where('title', $title);
-        })->with(['category', 'moduleRelation'])->where('active', $status)->orderBy('p_order', 'desc')->paginate(10);
+        })->with(['category', 'moduleRelation'])->where('active', $status);
+        if ($request->search) {
+            $query = $query->where(function ($q) use ($request, $title) {
+                $q->where('name_en', 'like', '%' . $request->search . '%')->orWhere('name_ar', 'like', '%' . $request->search . '%')->where('module', $title)
+                    ->orWhereHas('category', function ($q3) use ($request) {
+                        $q3->where('name', 'like', '%' . $request->search . '%')
+                            ->orWhere('name_ar', 'like', '%' . $request->search . '%');
+                    });
+            });
+        }
+
+        $posts = $query->orderBy('p_order', 'desc')->paginate(10)->appends([
+            'search' => $request->search
+        ]);
         return $posts;
     }
 
@@ -160,11 +187,11 @@ class PostService
     public function changePostOrderToLastFirst(Post $post)
     {
 //        $lastFirstOrder = Post::whereRaw('id = (SELECT MAX(id) FROM posts)')->first();
-        $lastFirstOrder = Post::where('module' , $post->module)->orderBy('p_order', 'desc')->first();
-         if (!$lastFirstOrder || ($lastFirstOrder == $post)) {
+        $lastFirstOrder = Post::where('module', $post->module)->orderBy('p_order', 'desc')->first();
+        if (!$lastFirstOrder || ($lastFirstOrder == $post)) {
             return false;
         }
-        $estimatedOrder = $lastFirstOrder->p_order > 0 ?  $lastFirstOrder->p_order : 1 ;
+        $estimatedOrder = $lastFirstOrder->p_order > 0 ? $lastFirstOrder->p_order : 1;
         $currentOrder = $post->p_order;
 
         /**************************************update the other post that has (estimated order that we will take) to be current order*****************************/

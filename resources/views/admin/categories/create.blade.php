@@ -42,7 +42,7 @@
                     <div class="card-header border-bottom card-tabs d-flex flex-wrap align-items-center gap-2">
                         <div class="flex-grow-1">
                                     <span
-                                        class="header-title text-black">  إضافة جديد</span>
+                                        class="header-title text-black">@lang('lang.admin.add_new')</span>
                         </div>
 
 
@@ -135,7 +135,7 @@
                 </div>
                 <div class="col-12  d-flex justify-content-end ">
                     <button type="submit"
-                            class="btn btn-primary mt-10">{{ __('backend_lang/custom.save') }}
+                            class="btn btn-primary mt-10">@lang('lang.admin.save')
                     </button>
                 </div>
             </form>

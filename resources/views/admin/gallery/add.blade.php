@@ -13,10 +13,10 @@
                 <div class="card">
                     <div class="card-header border-bottom card-tabs d-flex flex-wrap align-items-center gap-2">
                         <div class="flex-grow-1">
-                            <h4 class="header-title text-black">أضف إلى معرض الصور</h4>
+                            <h4 class="header-title text-black">@lang('lang.admin.add_to_gallery')</h4>
                         </div>
                     </div>
-                    <div id="message" class="alert alert-success" style="display: none">{{__('photo_inserted_successfully')}}</div>
+                    <div id="message" class="alert alert-success" style="display: none">{{__('lang.admin.photo_inserted_successfully')}}</div>
 {{--                    {{$post->id}}--}}
                     <div class="container p-4">
                         <label for="fileInput"
@@ -33,7 +33,7 @@
                                         stroke-linejoin="round"></path>
                                 </g>
                             </svg>
-                            اسحب الصور هنا أو اضغط لاختيار الملفات
+                            @lang('lang.admin.pull_photos_here_or_press_to_choose_photo')
                             <input type="file" id="fileInput" accept="image/*" multiple class="form-control d-none">
                         </label>
 
@@ -44,7 +44,7 @@
                                 الصورة
                             </button>
                             <a href="{{url(route('admin.posts.gallery' , ['module' => $post->module , 'post' => $post  ]))}}"
-                               class="btn main-btn go-to-gallery-btn fw-bold fs-6">معرض الصور</a>
+                               class="btn main-btn go-to-gallery-btn fw-bold fs-6">@lang('lang.admin.gallery')</a>
                         </div>
                     </div>
                 </div>

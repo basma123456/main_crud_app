@@ -38,17 +38,28 @@
                     <div class="dropdown-menu dropdown-menu-end">
                         <a href="#" class="dropdown-item">
                             <i class="ri-settings-2-line me-1 fs-6 align-middle"></i>
-                            <span class="align-middle fs-6">الإعدادات</span>
+                            <span class="align-middle fs-6">@lang('lang.admin.settings')</span>
                         </a>
 
                         <a href="#" class="dropdown-item d-flex align-items-center gap-1">
                             <i class="ri-global-line fs-6"></i>
-                            <span class="fs-6">English</span>
+                            {{--                            <span class="fs-6">English</span>--}}
+                        <!--------languages----------------->
+                            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+
+                                <a rel="alternate" hreflang="{{ $localeCode }}" class="{{app()->getLocale() == 'ar' && $localeCode == 'ar' ? 'd-none' : '' }} {{app()->getLocale() == 'en' && $localeCode == 'en' ? 'd-none' : '' }}"
+                                   href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                    {{ $properties['native'] }}
+                                </a>
+
+                        @endforeach
+                        <!--------languages----------------->
+
                         </a>
 
                         <a href="#" class="dropdown-item active fw-semibold text-danger">
                             <i class="ri-logout-box-line me-1 fs-6 align-middle"></i>
-                            <span class="align-middle fs-6">تسجيل الخروج</span>
+                            <span class="align-middle fs-6">@lang('lang.admin.log_out')</span>
                         </a>
                     </div>
                 </div>

@@ -14,14 +14,14 @@
                 <div class="card">
                     <div class="card-header border-bottom card-tabs d-flex flex-wrap align-items-center gap-2">
                         <div class="flex-grow-1">
-                            <h4 class="header-title text-black">معرض الصور</h4>
+                            <h4 class="header-title text-black">@lang('lang.admin.gallery')</h4>
                         </div>
 
 
                         <div class="table-main-btn mx-auto">
                             <a href="{{url(route('admin.posts.gallery_add' , ['module' => $post->module , 'post' => $post  ]))}}"
                                class="btn main-btn contact-us-btn fs-6" type="button">
-                                إضافة صورة
+                                @lang('lang.admin.add_photo')
                             </a>
                         </div>
                     </div>
@@ -43,7 +43,7 @@
                                             <div class="btn-group btn-group-sm">
                                                 <a target="_blank" href="{{asset($item->pic)}}"
                                                    class="btn-fancy btn-view" data-bs-toggle="tooltip"
-                                                   title="عرض الصورة">
+                                                   title="@lang('lang.admin.show_photo')">
                                                     <i class="ri-eye-line"></i>
                                                 </a>
 
@@ -54,7 +54,7 @@
                                                             '{{__("lang.deleting!")}}',
                                                             '{{__("lang.You wont be able to revert this!")}}',
                                                             '{{__('lang.Your file has been deleted.')}}')"
-                                                        title="حذف الصورة">
+                                                        title="@lang('lang.admin.delete_photo')">
                                                     <i class="ri-delete-bin-line"></i>
                                                 </button>
                                             </div>

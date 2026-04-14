@@ -70,7 +70,7 @@
 
                             <div class="col-md-6">
                                 <label for="pename"
-                                       class="form-label">{{ __('backend_lang/custom.title') }}</label>
+                                       class="form-label">@lang('lang.admin.title')</label>
                                 <input type="text" name="name_ar" style="direction:rtl "
                                        class="form-control" value="{{$category->name_ar}}" id="inputPassword">
                             </div>
@@ -78,12 +78,12 @@
                             @if(count($cats))
                                 <div class="col-md-6">
                                     <label for="cat"
-                                           class="form-label">{{ __('backend_lang/custom.sub_from') }}</label>
+                                           class="form-label">@lang('lang.admin.sub_form')</label>
                                     <select name="main_cat"
                                             id="select"
                                             class="form-select select2">
                                         <option value="">
-                                            {{ __('backend_lang/custom.select_cat') }}
+                                            @lang('lang.admin.select_category')
                                         </option>
 
                                         @foreach ($cats as $row)
@@ -106,7 +106,7 @@
                                         value=""
                                         type="file"/>
                                     <font>
-                                        {{ __('backend_lang/custom.max_10') }}
+                                        @lang('lang.admin.max_10')
                                     </font>
                                 </div>
                             </div>
@@ -124,7 +124,7 @@
                             <div class="col-md-6">
 
                                 <label for="parname"
-                                       class="form-label">{{ __('backend_lang/custom.title') }}</label>
+                                       class="form-label">@lang('lang.admin.title')</label>
                                 <input type="text" name="name"
                                        class="form-control"
                                        value="{{$category->name}}"
@@ -139,7 +139,7 @@
                 </div>
                 <div class="col-12  d-flex justify-content-end ">
                     <button type="submit"
-                            class="btn btn-primary mt-10">{{ __('backend_lang/custom.save') }}
+                            class="btn btn-primary mt-10">@lang('lang.admin.save')
                     </button>
                 </div>
             </form>

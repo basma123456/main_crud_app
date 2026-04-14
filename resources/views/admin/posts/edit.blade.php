@@ -521,10 +521,7 @@
                     </div>
                 </div>
             </form>
-
-
         </div>
-
     </div>
 @endsection
 @section('scripts')
