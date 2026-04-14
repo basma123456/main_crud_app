@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="utf-8" />
+        <title>إضافة صورة إلي المعرض — سمارت فيچن</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" href="assets/images/imgs/sv-icon.svg">
+        <link href="assets/css/vendor.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app-rtl.min.css" rel="stylesheet" type="text/css" id="app-style" />
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        
+        <!-- Custom css -->
+        <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+
+        <!-- Theme Config Js -->
+        <script src="assets/js/config.js"></script>
+    </head>
+    <body>
+
+        <div class="wrapper">
+
+            <div class="sidenav-menu shadow-lg">
+
+                <button class="button-sm-hover">
+                    <i class="ri-circle-line align-middle"></i>
+                </button>
+                
+
+                <button class="button-close-fullsidebar">
+                    <i class="ri-close-line align-middle"></i>
+                </button>
+
+                <div data-simplebar class="sidebar-links">
+                <a href="#" class="logo justify-content-center">
+                    <span>
+                        <span class="logo-lg"><img src="assets/images/imgs/logo-lg.webp" alt="logo"></span>
+                        <span class="logo-sm"><img src="assets/images/imgs/logo-sm.webp" alt="small logo"></span>
+                    </span>
+                </a>
+
+
+                    <ul class="side-nav gap-0">
+                        <li class="side-nav-title">القائمة الرئيسية</li>
+
+                        <li class="side-nav-item dropdown-sidebar-link py-1">
+                            <a data-bs-toggle="collapse" href="#news" aria-expanded="false" aria-controls="news"
+                                class="side-nav-link fw-bold dropdown-menu-link">
+                                <span class="menu-icon me-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 6h16v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6z"/>
+                                        <path d="M8 10h8"/>
+                                        <path d="M8 14h5"/>
+                                    </svg>
+                                </span>
+                                <span class="menu-text">أخبارنا</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <div class="sidebar-links-dropdown position-relative collapse" id="news">
+                                <ul class="sub-menu">
+                                    <li class="side-nav-item">
+                                        <a href="list.html" class="side-nav-link">
+                                            <span class="sub-icon me-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <circle cx="8" cy="8" r="3"></circle>
+                                                </svg>
+                                            </span>
+                                            <span class="menu-text">عرض الكل</span>
+                                        </a>
+                                    </li>
+                                    <li class="side-nav-item">
+                                        <a href="#" class="side-nav-link">
+                                            <span class="sub-icon me-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M4 8h8"/>
+                                                </svg>
+                                            </span>
+                                            <span class="menu-text">عرض المفعل</span>
+                                        </a>
+                                    </li>
+                                    <li class="side-nav-item">
+                                        <a href="#" class="side-nav-link">
+                                            <span class="sub-icon me-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M4 8h8"/>
+                                                    <path d="M3 3L13 13"/>
+                                                </svg>
+                                            </span>
+                                            <span class="menu-text">عرض غير المفعل</span>
+                                        </a>
+                                    </li>
+                                    <li class="side-nav-item">
+                                        <a href="add.html" class="side-nav-link">
+                                            <span class="sub-icon me-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M8 4v8M4 8h8"/>
+                                                </svg>
+                                            </span>
+                                            <span class="menu-text">إضافة جديد</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="side-nav-item py-1">
+                            <a href="gallery.html" aria-controls="gallery"
+                                class="side-nav-link fw-bold">
+                                <span class="menu-icon me-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <path d="M3 5L6 2h12l3 3"></path>
+                                    </svg>
+                                </span>
+                                <span class="menu-text">معرض الصور</span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav-item py-1">
+                            <a href="contact-us.html" aria-controls="contact-us"
+                                class="side-nav-link fw-bold">
+                                <span class="menu-icon me-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
+                                        <line x1="3" y1="5" x2="12" y2="12"></line>
+                                        <line x1="21" y1="5" x2="12" y2="12"></line>
+                                    </svg>
+                                </span>
+                                <span class="menu-text">تواصل معنا</span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav-item py-1">
+                            <a href="settings.html" aria-controls="settings"
+                                class="side-nav-link fw-bold">
+                                <span class="menu-icon me-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                                    </svg>
+                                </span>
+                                <span class="menu-text">الإعدادات</span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+
+            <header class="app-topbar shadow-lg">
+                <div class="page-container topbar-menu">
+                    <div class="d-flex align-items-center gap-2">
+
+                        <button class="sidenav-toggle-button px-2">
+                            <i class="ri-menu-5-line fs-24"></i>
+                        </button>
+
+                        <button class="topnav-toggle-button px-2" data-bs-toggle="collapse" data-bs-target="#topnav-menu-content">
+                            <i class="ri-menu-5-line fs-24"></i>
+                        </button>
+
+                        <div>
+                            <h2 class="logo-title d-none d-md-flex flex-column align-items-start mb-0 gap-0.5">
+                                <span>مسابقات الرماية السنوية</span>
+                                <span>Annual Shooting Competitions</span>
+                            </h2>
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex align-items-center gap-2">
+
+                        <div class="topbar-item nav-user">
+                            <div class="dropdown">
+                                <a class="topbar-link dropdown-toggle drop-arrow-none px-2" data-bs-toggle="dropdown"
+                                    data-bs-offset="0,25" type="button" aria-haspopup="false" aria-expanded="false">
+                                    <img src="assets/images/imgs/profile-avatar.png" width="28" class="rounded-circle me-lg-2 d-flex"
+                                        alt="user-image">
+                                    <span class="d-lg-flex flex-column gap-1 d-none mt-1">
+                                        <h5 class="my-0 fs-5">Smart Vision</h5>
+                                    </span>
+                                    <i class="header-user-arrow ri-arrow-down-s-line d-none d-lg-block align-middle ms-2 mt-1"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="#" class="dropdown-item">
+                                        <i class="ri-settings-2-line me-1 fs-6 align-middle"></i>
+                                        <span class="align-middle fs-6">الإعدادات</span>
+                                    </a>
+
+                                    <a href="#" class="dropdown-item d-flex align-items-center gap-1">
+                                        <i class="ri-global-line fs-6"></i>
+                                        <span class="fs-6">English</span>
+                                    </a>
+
+                                    <a href="#" class="dropdown-item active fw-semibold text-danger">
+                                        <i class="ri-logout-box-line me-1 fs-6 align-middle"></i>
+                                        <span class="align-middle fs-6">تسجيل الخروج</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+
+            <div class="page-content add-to-gallery-pg">
+                <div class="page-container pt-3">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header border-bottom card-tabs d-flex flex-wrap align-items-center gap-2">
+                                    <div class="flex-grow-1">
+                                        <h4 class="header-title text-black">أضف إلى معرض الصور</h4>
+                                    </div>
+                                </div>
+                                <div class="container p-4">
+                                    <label for="fileInput" class="add-input d-flex flex-column justify-content-center align-items-center shadow-lg rounded p-4 fw-bold text-dark text-center position-relative">
+
+                                            <svg viewBox="0 0 24 24" class="drag-drop-icon mb-1" width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> 
+                                                <path d="M7 10V9C7 6.23858 9.23858 4 12 4C14.7614 4 17 6.23858 17 9V10C19.2091 10 21 11.7909 21 14C21 15.4806 20.1956 16.8084 19 17.5M7 10C4.79086 10 3 11.7909 3 14C3 15.4806 3.8044 16.8084 5 17.5M7 10C7.43285 10 7.84965 10.0688 8.24006 10.1959M12 12V21M12 12L15 15M12 12L9 15" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                        اسحب الصور هنا أو اضغط لاختيار الملفات
+                                        <input type="file" id="fileInput" accept="image/*" multiple class="form-control d-none">
+                                    </label>
+    
+                                    <div id="previewArea" class="d-flex flex-wrap gap-2 mb-4"></div>
+    
+                                    <div class="d-flex justify-content-end gap-2 flex-column flex-md-row">
+                                        <button id="saveBtn" class="btn main-btn save-btn fw-bold fs-6">حفظ الصورة</button>
+                                        <a href="gallery.html" class="btn main-btn go-to-gallery-btn fw-bold fs-6">معرض الصور</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="footer shadow-lg">
+                    <div class="page-container">
+                        <div class="row">
+                            <div class="copyright col-12 col-md-6 text-center text-md-start text-black">
+                                <a href="https://esmart-vision.com/" target="_blank"><img src="assets/images/imgs/sv-logo.png" class="img-fluid"/></a>
+                                Powered by 
+                            </div>
+                            <div class="copyright col-12 col-md-6 d-flex align-items-center text-black justify-content-end">
+                                ALL RIGHT RESERVED <script>document.write(new Date().getFullYear())</script> © SMART VISION — IT SOLUTIONS
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div> 
+
+
+
+        </div>
+
+        
+        <script src="assets/js/vendor.min.js"></script>
+        <script src="assets/js/app.js"></script>
+        <script src="add-to-gallery.js"></script>
+    </body>
+
+</html>

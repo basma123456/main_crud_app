@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="utf-8" />
+        <title>أخبارنا — سمارت فيچن</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" href="assets/images/imgs/sv-icon.svg">
+        <link href="assets/css/vendor.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app-rtl.min.css" rel="stylesheet" type="text/css" id="app-style" />
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        
+        <!-- Custom css -->
+        <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+
+        <!-- Theme Config Js -->
+        <script src="assets/js/config.js"></script>
+    </head>
+    <body>
+
+        <div class="wrapper">
+
+
+            <div class="sidenav-menu shadow-lg">
+
+                <button class="button-sm-hover">
+                    <i class="ri-circle-line align-middle"></i>
+                </button>
+                
+
+                <button class="button-close-fullsidebar">
+                    <i class="ri-close-line align-middle"></i>
+                </button>
+
+                <div data-simplebar class="sidebar-links">
+                <a href="#" class="logo justify-content-center">
+                    <span>
+                        <span class="logo-lg"><img src="assets/images/imgs/logo-lg.webp" alt="logo"></span>
+                        <span class="logo-sm"><img src="assets/images/imgs/logo-sm.webp" alt="small logo"></span>
+                    </span>
+                </a>
+
+
+                    <ul class="side-nav gap-0">
+                        <li class="side-nav-title">القائمة الرئيسية</li>
+
+                        <li class="side-nav-item dropdown-sidebar-link py-1">
+                            <a data-bs-toggle="collapse" href="#news" aria-expanded="false" aria-controls="news"
+                                class="side-nav-link fw-bold dropdown-menu-link">
+                                <span class="menu-icon me-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 6h16v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6z"/>
+                                        <path d="M8 10h8"/>
+                                        <path d="M8 14h5"/>
+                                    </svg>
+                                </span>
+                                <span class="menu-text">أخبارنا</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <div class="sidebar-links-dropdown position-relative collapse" id="news">
+                                <ul class="sub-menu">
+                                    <li class="side-nav-item">
+                                        <a href="list.html" class="side-nav-link">
+                                            <span class="sub-icon me-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <circle cx="8" cy="8" r="3"></circle>
+                                                </svg>
+                                            </span>
+                                            <span class="menu-text">عرض الكل</span>
+                                        </a>
+                                    </li>
+                                    <li class="side-nav-item">
+                                        <a href="#" class="side-nav-link">
+                                            <span class="sub-icon me-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M4 8h8"/>
+                                                </svg>
+                                            </span>
+                                            <span class="menu-text">عرض المفعل</span>
+                                        </a>
+                                    </li>
+                                    <li class="side-nav-item">
+                                        <a href="#" class="side-nav-link">
+                                            <span class="sub-icon me-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M4 8h8"/>
+                                                    <path d="M3 3L13 13"/>
+                                                </svg>
+                                            </span>
+                                            <span class="menu-text">عرض غير المفعل</span>
+                                        </a>
+                                    </li>
+                                    <li class="side-nav-item">
+                                        <a href="add.html" class="side-nav-link">
+                                            <span class="sub-icon me-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M8 4v8M4 8h8"/>
+                                                </svg>
+                                            </span>
+                                            <span class="menu-text">إضافة جديد</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="side-nav-item py-1">
+                            <a href="gallery.html" aria-controls="gallery"
+                                class="side-nav-link fw-bold">
+                                <span class="menu-icon me-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <path d="M3 5L6 2h12l3 3"></path>
+                                    </svg>
+                                </span>
+                                <span class="menu-text">معرض الصور</span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav-item py-1">
+                            <a href="contact-us.html" aria-controls="contact-us"
+                                class="side-nav-link fw-bold">
+                                <span class="menu-icon me-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
+                                        <line x1="3" y1="5" x2="12" y2="12"></line>
+                                        <line x1="21" y1="5" x2="12" y2="12"></line>
+                                    </svg>
+                                </span>
+                                <span class="menu-text">تواصل معنا</span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav-item py-1">
+                            <a href="settings.html" aria-controls="settings"
+                                class="side-nav-link fw-bold">
+                                <span class="menu-icon me-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                                    </svg>
+                                </span>
+                                <span class="menu-text">الإعدادات</span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+
+            <header class="app-topbar shadow-lg">
+                <div class="page-container topbar-menu">
+                    <div class="d-flex align-items-center gap-2">
+
+                        <button class="sidenav-toggle-button px-2">
+                            <i class="ri-menu-5-line fs-24"></i>
+                        </button>
+
+                        <button class="topnav-toggle-button px-2" data-bs-toggle="collapse" data-bs-target="#topnav-menu-content">
+                            <i class="ri-menu-5-line fs-24"></i>
+                        </button>
+
+                        <div>
+                            <h2 class="logo-title d-none d-md-flex flex-column align-items-start mb-0 gap-0.5">
+                                <span>مسابقات الرماية السنوية</span>
+                                <span>Annual Shooting Competitions</span>
+                            </h2>
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex align-items-center gap-2">
+
+                        <div class="topbar-item nav-user">
+                            <div class="dropdown">
+                                <a class="topbar-link dropdown-toggle drop-arrow-none px-2" data-bs-toggle="dropdown"
+                                    data-bs-offset="0,25" type="button" aria-haspopup="false" aria-expanded="false">
+                                    <img src="assets/images/imgs/profile-avatar.png" width="28" class="rounded-circle me-lg-2 d-flex"
+                                        alt="user-image">
+                                    <span class="d-lg-flex flex-column gap-1 d-none mt-1">
+                                        <h5 class="my-0 fs-5">Smart Vision</h5>
+                                    </span>
+                                    <i class="header-user-arrow ri-arrow-down-s-line d-none d-lg-block align-middle ms-2 mt-1"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="#" class="dropdown-item">
+                                        <i class="ri-settings-2-line me-1 fs-6 align-middle"></i>
+                                        <span class="align-middle fs-6">الإعدادات</span>
+                                    </a>
+
+                                    <a href="#" class="dropdown-item d-flex align-items-center gap-1">
+                                        <i class="ri-global-line fs-6"></i>
+                                        <span class="fs-6">English</span>
+                                    </a>
+
+                                    <a href="#" class="dropdown-item active fw-semibold text-danger">
+                                        <i class="ri-logout-box-line me-1 fs-6 align-middle"></i>
+                                        <span class="align-middle fs-6">تسجيل الخروج</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+
+            <div class="page-content list-pg">
+                <div class="page-container pt-3">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header border-bottom card-tabs d-flex flex-wrap align-items-center gap-2">
+                                    <div class="flex-grow-1">
+                                        <h4 class="header-title text-black">أخبارنا</h4>
+                                    </div>
+
+                                </div>
+
+                                <div class="card-breadcrumb px-3 py-2 shadow-sm">
+                                    <div class="d-flex align-items-center flex-wrap flex-lg-nowrap gap-2">
+
+                                        <div class="stats flex-grow-1 d-flex align-items-center gap-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="docs-nums bi bi-list-ul" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M5 12.5a.5.5 0 0 1 0-1h9a.5.5 0 0 1 0 1H5zm0-4a.5.5 0 0 1 0-1h9a.5.5 0 0 1 0 1H5zm0-4a.5.5 0 0 1 0-1h9a.5.5 0 0 1 0 1H5z"/>
+                                                <circle cx="1.5" cy="4.5" r=".5"/>
+                                                <circle cx="1.5" cy="8.5" r=".5"/>
+                                                <circle cx="1.5" cy="12.5" r=".5"/>
+                                            </svg>
+                                            <h4 class="mb-0">عدد السجلات: <span class="fw-bold">10</span></h4>
+                                        </div>
+
+                                        <div class="d-flex align-items-center gap-2 flex-column flex-md-row">
+
+                                            <form class="submenu-search position-relative d-flex justify-content-center align-items-center gap-2 overflow-hidden cursor-pointer">
+                                                
+                                                <input
+                                                type="text"
+                                                placeholder="بحث"
+                                                class="search-input bg-transparent py-1 fs-6"
+                                                />
+                                                <button class="search-icon position-absolute d-flex justify-content-center align-items-center border-0">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                                                    </svg>
+                                                </button>
+                                            </form>
+
+                                            <div class="table-dropdown">
+                                                <button class="btn main-btn dropdown-toggle fs-6" type="button" id="newsDropdown" data-bs-toggle="dropdown">
+                                                    التحكم
+                                                    <i class="ri-arrow-down-s-line"></i>
+                                                </button>
+
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item fs-6" href="list.html">عرض الكل</a></li>
+                                                    <li><a class="dropdown-item fs-6" href="add.html">إضافة جديد</a></li>
+                                                    <li><a class="dropdown-item fs-6" href="#">عرض المفعل</a></li>
+                                                    <li><a class="dropdown-item fs-6" href="#">عرض غير المفعل</a></li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-striped-columns mb-0 align-middle mx-auto">
+                                        <thead class="bg-light-subtle">
+                                            <tr>
+                                                <th class="ps-3">
+                                                    <input type="checkbox" class="list-pg-check-select-all form-check-input row-select">
+                                                </th>
+                                                <th class="fs-12 text-uppercase text-muted text-center">الصورة</th>
+                                                <th class="fs-12 text-uppercase text-muted text-center">العنوان (إنجليزي)</th>
+                                                <th class="fs-12 text-uppercase text-muted text-center">العنوان (عربي)</th>
+                                                <th class="fs-12 text-uppercase text-muted text-center">الإجراءات</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="ps-3">
+                                                    <input type="checkbox" class="list-pg-check form-check-input row-select">
+                                                </td>
+                                                <td class="text-center item-img">
+                                                    <img src="https://assets-news.asharq.com/images/articles/864x648/4-3/2saoOeUiE1_1759148067.webp" alt="News 1" class="img-fluid rounded">
+                                                </td>
+                                                <td class="text-center">International Conference on Modern Education and Cultural Exchange 2024</td>
+                                                <td class="text-center">المؤتمر الدولي للتعليم الحديث وتبادل الثقافات 2024</td>
+                                                <td class="text-center pe-3">
+                                                    <div class="btn-group-fancy second-choice" role="group">
+                                                        <a href="add.html" class="btn-fancy btn-edit" data-bs-toggle="tooltip" title="تعديل الخبر">
+                                                            <i class="ri-edit-box-line"></i>
+                                                        </a>
+                                                        <button class="btn-fancy btn-view" data-bs-toggle="tooltip" title="عرض الخبر">
+                                                            <i class="ri-eye-line"></i>
+                                                        </button>
+                                                        <a href="gallery.html" class="btn-fancy btn-gallery" data-bs-toggle="tooltip" title="معرض الصور">
+                                                            <i class="ri-image-line"></i>
+                                                        </a>
+                                                        <button class="btn-fancy btn-delete" data-bs-toggle="tooltip" title="حذف الخبر">
+                                                            <i class="ri-delete-bin-line"></i>
+                                                        </button>
+                                                        <button class="btn-fancy btn-up" data-bs-toggle="tooltip" title="نقل الخبر للأعلى" disabled>
+                                                            <i class="ri-arrow-up-line"></i>
+                                                        </button>
+                                                        <button class="btn-fancy btn-down" data-bs-toggle="tooltip" title="نقل الخبر للأسفل">
+                                                            <i class="ri-arrow-down-line"></i>
+                                                        </button>
+                                                        <button class="btn-fancy btn-first" data-bs-toggle="tooltip" title="نقل الخبر للأول" disabled>
+                                                            <i class="ri-arrow-up-s-line"></i>
+                                                        </button>
+                                                        <button class="btn-fancy btn-last" data-bs-toggle="tooltip" title="نقل الخبر للأخير">
+                                                            <i class="ri-arrow-down-s-line"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="ps-3">
+                                                    <input type="checkbox" class="list-pg-check form-check-input row-select">
+                                                </td>
+                                                <td class="text-center item-img">
+                                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeuzo4KmipivHyEN_kPxHmZql4B3qBMjjcrA&s" alt="News 2" class="img-fluid rounded">
+                                                </td>
+                                                <td class="text-center">Academic Workshop on Innovative Teaching Methods and Learning Techniques</td>
+                                                <td class="text-center">ورشة أكاديمية حول أساليب التعليم المبتكرة وتقنيات التعلم</td>
+                                                <td class="text-center pe-3">
+                                                    <div class="btn-group-fancy second-choice" role="group">
+                                                        <a href="add.html" class="btn-fancy btn-edit" data-bs-toggle="tooltip" title="تعديل الخبر">
+                                                            <i class="ri-edit-box-line"></i>
+                                                        </a>
+                                                        <button class="btn-fancy btn-view" data-bs-toggle="tooltip" title="عرض الخبر">
+                                                            <i class="ri-eye-line"></i>
+                                                        </button>
+                                                        <a href="gallery.html" class="btn-fancy btn-gallery" data-bs-toggle="tooltip" title="معرض الصور">
+                                                            <i class="ri-image-line"></i>
+                                                        </a>
+                                                        <button class="btn-fancy btn-delete" data-bs-toggle="tooltip" title="حذف الخبر">
+                                                            <i class="ri-delete-bin-line"></i>
+                                                        </button>
+                                                        <button class="btn-fancy btn-up" data-bs-toggle="tooltip" title="نقل الخبر للأعلى" >
+                                                            <i class="ri-arrow-up-line"></i>
+                                                        </button>
+                                                        <button class="btn-fancy btn-down" data-bs-toggle="tooltip" title="نقل الخبر للأسفل">
+                                                            <i class="ri-arrow-down-line"></i>
+                                                        </button>
+                                                        <button class="btn-fancy btn-first" data-bs-toggle="tooltip" title="نقل الخبر للأول" >
+                                                            <i class="ri-arrow-up-s-line"></i>
+                                                        </button>
+                                                        <button class="btn-fancy btn-last" data-bs-toggle="tooltip" title="نقل الخبر للأخير">
+                                                            <i class="ri-arrow-down-s-line"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="ps-3">
+                                                    <input type="checkbox" class="list-pg-check form-check-input row-select">
+                                                </td>
+                                                <td class="text-center item-img">
+                                                    <img src="https://cdn.al-ain.com/lg/images/2021/3/16/127-213415-palestine-home-cultural-gaza-2.jpeg" alt="News 3" class="img-fluid rounded">
+                                                </td>
+                                                <td class="text-center">Annual Cultural Festival Showcasing Local Arts and Traditions</td>
+                                                <td class="text-center">المهرجان الثقافي السنوي لعرض الفنون والتقاليد المحلية</td>
+                                                <td class="text-center pe-3">
+                                                    <div class="btn-group-fancy second-choice" role="group">
+                                                        <a href="add.html" class="btn-fancy btn-edit" data-bs-toggle="tooltip" title="تعديل الخبر">
+                                                            <i class="ri-edit-box-line"></i>
+                                                        </a>
+                                                        <button class="btn-fancy btn-view" data-bs-toggle="tooltip" title="عرض الخبر">
+                                                            <i class="ri-eye-line"></i>
+                                                        </button>
+                                                        <a href="gallery.html" class="btn-fancy btn-gallery" data-bs-toggle="tooltip" title="معرض الصور">
+                                                            <i class="ri-image-line"></i>
+                                                        </a>
+                                                        <button class="btn-fancy btn-delete" data-bs-toggle="tooltip" title="حذف الخبر">
+                                                            <i class="ri-delete-bin-line"></i>
+                                                        </button>
+                                                        <button class="btn-fancy btn-up" data-bs-toggle="tooltip" title="نقل الخبر للأعلى" >
+                                                            <i class="ri-arrow-up-line"></i>
+                                                        </button>
+                                                        <button class="btn-fancy btn-down" data-bs-toggle="tooltip" title="نقل الخبر للأسفل">
+                                                            <i class="ri-arrow-down-line"></i>
+                                                        </button>
+                                                        <button class="btn-fancy btn-first" data-bs-toggle="tooltip" title="نقل الخبر للأول" >
+                                                            <i class="ri-arrow-up-s-line"></i>
+                                                        </button>
+                                                        <button class="btn-fancy btn-last" data-bs-toggle="tooltip" title="نقل الخبر للأخير">
+                                                            <i class="ri-arrow-down-s-line"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="ps-3">
+                                                    <input type="checkbox" class="list-pg-check form-check-input row-select">
+                                                </td>
+                                                <td class="text-center item-img">
+                                                    <img src="https://www.apple.com/newsroom/images/product/services/standard/Apple-Community-Education-Initiative-teacher-helping-students_big.jpg.large.jpg" alt="News 4" class="img-fluid rounded">
+                                                </td>
+                                                <td class="text-center">New Educational Initiative to Support Digital Learning in Schools</td>
+                                                <td class="text-center">مبادرة تعليمية جديدة لدعم التعلم الرقمي في المدارس</td>
+                                                <td class="text-center pe-3">
+                                                    <div class="btn-group-fancy second-choice" role="group">
+                                                        <a href="add.html" class="btn-fancy btn-edit" data-bs-toggle="tooltip" title="تعديل الخبر">
+                                                            <i class="ri-edit-box-line"></i>
+                                                        </a>
+                                                        <button class="btn-fancy btn-view" data-bs-toggle="tooltip" title="عرض الخبر">
+                                                            <i class="ri-eye-line"></i>
+                                                        </button>
+                                                        <a href="gallery.html" class="btn-fancy btn-gallery" data-bs-toggle="tooltip" title="معرض الصور">
+                                                            <i class="ri-image-line"></i>
+                                                        </a>
+                                                        <button class="btn-fancy btn-delete" data-bs-toggle="tooltip" title="حذف الخبر">
+                                                            <i class="ri-delete-bin-line"></i>
+                                                        </button>
+                                                        <button class="btn-fancy btn-up" data-bs-toggle="tooltip" title="نقل الخبر للأعلى" >
+                                                            <i class="ri-arrow-up-line"></i>
+                                                        </button>
+                                                        <button class="btn-fancy btn-down" data-bs-toggle="tooltip" title="نقل الخبر للأسفل">
+                                                            <i class="ri-arrow-down-line"></i>
+                                                        </button>
+                                                        <button class="btn-fancy btn-first" data-bs-toggle="tooltip" title="نقل الخبر للأول" >
+                                                            <i class="ri-arrow-up-s-line"></i>
+                                                        </button>
+                                                        <button class="btn-fancy btn-last" data-bs-toggle="tooltip" title="نقل الخبر للأخير">
+                                                            <i class="ri-arrow-down-s-line"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="ps-3">
+                                                    <input type="checkbox" class="list-pg-check form-check-input row-select">
+                                                </td>
+                                                <td class="text-center item-img">
+                                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIRQk1hzNi5frv6NsEnXfhK7ZQ7wYA8mMzWw&s" alt="News 5" class="img-fluid rounded">
+                                                </td>
+                                                <td class="text-center">University Hosts International Seminar on Technology and Innovation</td>
+                                                <td class="text-center">الجامعة تستضيف ندوة دولية حول التكنولوجيا والابتكار</td>
+                                                <td class="text-center pe-3">
+                                                    <div class="btn-group-fancy second-choice" role="group">
+                                                        <a href="add.html" class="btn-fancy btn-edit" data-bs-toggle="tooltip" title="تعديل الخبر">
+                                                            <i class="ri-edit-box-line"></i>
+                                                        </a>
+                                                        <button class="btn-fancy btn-view" data-bs-toggle="tooltip" title="عرض الخبر">
+                                                            <i class="ri-eye-line"></i>
+                                                        </button>
+                                                        <a href="gallery.html" class="btn-fancy btn-gallery" data-bs-toggle="tooltip" title="معرض الصور">
+                                                            <i class="ri-image-line"></i>
+                                                        </a>
+                                                        <button class="btn-fancy btn-delete" data-bs-toggle="tooltip" title="حذف الخبر">
+                                                            <i class="ri-delete-bin-line"></i>
+                                                        </button>
+                                                        <button class="btn-fancy btn-up" data-bs-toggle="tooltip" title="نقل الخبر للأعلى" >
+                                                            <i class="ri-arrow-up-line"></i>
+                                                        </button>
+                                                        <button class="btn-fancy btn-down" data-bs-toggle="tooltip" title="نقل الخبر للأسفل">
+                                                            <i class="ri-arrow-down-line"></i>
+                                                        </button>
+                                                        <button class="btn-fancy btn-first" data-bs-toggle="tooltip" title="نقل الخبر للأول" >
+                                                            <i class="ri-arrow-up-s-line"></i>
+                                                        </button>
+                                                        <button class="btn-fancy btn-last" data-bs-toggle="tooltip" title="نقل الخبر للأخير">
+                                                            <i class="ri-arrow-down-s-line"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="ps-3">
+                                                    <input type="checkbox" class="list-pg-check form-check-input row-select">
+                                                </td>
+                                                <td class="text-center item-img">
+                                                    <img src="https://alraynews.net/wp-content/uploads/2025/06/306419da-2263-4855-8909-c75d77f2ead4.jpeg?v=1748778345" alt="News 6" class="img-fluid rounded">
+                                                </td>
+                                                <td class="text-center">Community Cultural Event Brings Together Artists and Performers</td>
+                                                <td class="text-center">فعالية ثقافية مجتمعية تجمع الفنانين والمبدعين</td>
+                                                <td class="text-center pe-3">
+                                                    <div class="btn-group-fancy second-choice" role="group">
+                                                        <a href="add.html" class="btn-fancy btn-edit" data-bs-toggle="tooltip" title="تعديل الخبر">
+                                                            <i class="ri-edit-box-line"></i>
+                                                        </a>
+                                                        <button class="btn-fancy btn-view" data-bs-toggle="tooltip" title="عرض الخبر">
+                                                            <i class="ri-eye-line"></i>
+                                                        </button>
+                                                        <a href="gallery.html" class="btn-fancy btn-gallery" data-bs-toggle="tooltip" title="معرض الصور">
+                                                            <i class="ri-image-line"></i>
+                                                        </a>
+                                                        <button class="btn-fancy btn-delete" data-bs-toggle="tooltip" title="حذف الخبر">
+                                                            <i class="ri-delete-bin-line"></i>
+                                                        </button>
+                                                        <button class="btn-fancy btn-up" data-bs-toggle="tooltip" title="نقل الخبر للأعلى" >
+                                                            <i class="ri-arrow-up-line"></i>
+                                                        </button>
+                                                        <button class="btn-fancy btn-down" data-bs-toggle="tooltip" title="نقل الخبر للأسفل" disabled>
+                                                            <i class="ri-arrow-down-line"></i>
+                                                        </button>
+                                                        <button class="btn-fancy btn-first" data-bs-toggle="tooltip" title="نقل الخبر للأول" >
+                                                            <i class="ri-arrow-up-s-line"></i>
+                                                        </button>
+                                                        <button class="btn-fancy btn-last" data-bs-toggle="tooltip" title="نقل الخبر للأخير" disabled>
+                                                            <i class="ri-arrow-down-s-line"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="card-footer">
+                                    <div class="d-flex justify-content-end">
+                                        <ul class="pagination mb-0 align-items-center custom-pagination">
+
+                                            <li class="page-item">
+                                                <a class="page-link rounded-circle border-0 shadow-sm d-flex align-items-center justify-content-center" href="#">
+                                                    <i class="ri-arrow-right-s-line"></i>
+                                                </a>
+                                            </li>
+
+                                            <li class="page-item">
+                                                <a class="page-link rounded-circle border-0 shadow-sm d-flex align-items-center justify-content-center" href="#">1</a>
+                                            </li>
+
+                                            <li class="page-item active">
+                                                <a class="page-link rounded-circle border-0 shadow-sm d-flex align-items-center justify-content-center" href="#">2</a>
+                                            </li>
+
+                                            <li class="page-item">
+                                                <a class="page-link rounded-circle border-0 shadow-sm d-flex align-items-center justify-content-center" href="#">3</a>
+                                            </li>
+
+                                            <li class="page-item">
+                                                <a class="page-link rounded-circle border-0 shadow-sm d-flex align-items-center justify-content-center" href="#">
+                                                    <i class="ri-arrow-left-s-line"></i>
+                                                </a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                            
+                    </div> 
+                        
+                </div>
+
+                <footer class="footer shadow-lg">
+                    <div class="page-container">
+                        <div class="row">
+                            <div class="copyright col-12 col-md-6 text-center text-md-start text-black">
+                                <a href="https://esmart-vision.com/" target="_blank"><img src="assets/images/imgs/sv-logo.png" class="img-fluid"/></a>
+                                Powered by 
+                            </div>
+                            <div class="copyright col-12 col-md-6 d-flex align-items-center text-black justify-content-end">
+                                ALL RIGHT RESERVED <script>document.write(new Date().getFullYear())</script> © SMART VISION — IT SOLUTIONS
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div> 
+
+
+
+        </div>
+
+        
+        <script src="assets/js/vendor.min.js"></script>
+        <script src="assets/js/app.js"></script>
+        <script src="list.js"></script>
+    </body>
+
+</html>
