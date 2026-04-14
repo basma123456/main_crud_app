@@ -68,7 +68,7 @@ class PostService
 
     public function updateByQueryBuilder($arrEn, $arrAr, $id)
     {
-
+//dd($arrEn , $arrAr);
         DB::table('posts')
             ->join('posts_lang', 'posts.id', '=', 'posts_lang.post_id')
             ->where('posts.id', $id)
@@ -93,6 +93,7 @@ class PostService
 
     public function getArrForStorePostLangs(Request $request, $lastInsertID)
     {
+
         $arrAr = [
             'post_id' => $lastInsertID,
             'lang' => 'ar',
@@ -101,7 +102,7 @@ class PostService
             'short' => $request->short_ar ?? 0,
             'keyss' => $request->keyss_ar ?? 0,
             'descc' => $request->descc_ar ?? 0,
-            'txt2' => 0,
+            'txt2' => '0',
             'txt3' => 0,
             'area2' => 0,
             'area3' => 0,
@@ -110,13 +111,13 @@ class PostService
         if (!empty($request->area_ar)) {
             foreach ($request->area_ar as $key => $val) {
                 $num = ($key + 1);
-                $arrAr['area' . $num] = $val;
+                $arrAr['area' . $num] = $val??0;
             }
         }
         if (!empty($request->txt_ar)) {
             foreach ($request->txt_ar as $key => $val) {
                 $num = ($key + 1);
-                $arrAr['txt' . $num] = $val;
+                $arrAr['txt' . $num] = $val??0;
             }
         }
 
@@ -128,7 +129,7 @@ class PostService
             'short' => $request->short ?? 0,
             'keyss' => $request->keyss_en ?? 0,
             'descc' => $request->descc_en ?? 0,
-            'txt2' => 0,
+            'txt2' => '0',
             'txt3' => 0,
             'area2' => 0,
             'area3' => 0,
@@ -161,12 +162,13 @@ class PostService
         $msg = '';
         switch ($direction) {
             case "+" :
+
                 $currentOrder = $post->p_order;
                 $estimatedOrder = $currentOrder + 1;
                 $msg = __('lang.order_increased_successfully');
                 break;
             case "-" :
-                $currentOrder = $post->p_order;
+                 $currentOrder = $post->p_order;
                 $estimatedOrder = $post->p_order >= 2 ? $currentOrder - 1 : 1;
                 $msg = __('lang.order_decreased_successfully');
                 break;

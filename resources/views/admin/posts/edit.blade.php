@@ -131,7 +131,7 @@
 
                                         <label for="parname"
                                                class="form-label">{{ __('backend_lang/custom.title') }}</label>
-                                        <input type="text" name="parname"
+                                        <input type="text" name="parname_rtl"
                                                style="direction: rtl !important"
                                                class="form-control"
                                                value="{{ $data->name_ar }}"
@@ -296,7 +296,7 @@
                                     <div class="col-md-12">
                                         <label for="pename"
                                                class="form-label">{{ __('backend_lang/custom.title') }}</label>
-                                        <input type="text" name="pename"
+                                        <input type="text" name="parname"
                                                class="form-control"
                                                value="{{ $postLang->name }}"
                                                id="inputPassword"

@@ -33,6 +33,17 @@ class PostRequest extends FormRequest
     public function rules(): array
     {
         $arr = [];
+         if($this->method() == 'POST') {
+            $arr = [
+                'parname_rtl' => 'required|string|min:1|max:190',
+                'parname' => 'required|string|min:1|max:190',
+            ];
+        }elseif($this->method() == 'PUT'){
+            $arr = [
+                'parname_rtl' => 'required|string|min:1|max:190',
+                'parname' => 'required|string|min:1|max:190',
+            ];
+        }
 
 //        if ($this->module->name_Req == 'yes') {
 //            $arr =  array_merge($arr , [
@@ -59,4 +70,6 @@ class PostRequest extends FormRequest
 
         return $arr;
     }
-}
+
+
+ }

@@ -130,7 +130,7 @@ class PostController extends Controller
         $details = ($postRow->module == 'video' || $postRow->module == 'videos') ? $request->details : $request->details_ar;
         $arrAr = [
             'posts_lang.name' => $request->parname ?? 0,
-            'posts.name_ar' => $request->parname ?? 0,
+            'posts.name_ar' => $request->parname_rtl ?? 0,
             'lang' => 'ar',
             'posts_lang.details' => $details ?? 0, //videos
             'posts_lang.short' => $request->short_ar ?? 0, //videos
@@ -150,7 +150,7 @@ class PostController extends Controller
             'posts.news_date' => $request->news_date,
             // 'posts.title_url' => Str::slug($request->pename, '-'),
             'cat' => $request->cat ?? null,
-            'posts_lang.name' => $request->pename,
+            'posts_lang.name' => $request->parname,
             'posts_lang.details' => $request->details ?? 0,
             'posts_lang.short' => $request->short ?? 0,
             'posts_lang.keyss' => $request->keyss_en ?? 0,
@@ -178,7 +178,7 @@ class PostController extends Controller
     }
 
 
-    public function update($module, $id, Request $request)
+    public function update($module, $id, PostRequest $request)
     {
         $data = $this->postService->queryPostByQueryBuilder($id, 'en');
         $postRow = $data->first();
