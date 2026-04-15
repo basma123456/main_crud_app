@@ -19,7 +19,7 @@
 
 
         <ul class="side-nav gap-0">
-            <li class="side-nav-title">@lang('lang.admin.main_list')</li>
+            <li class="side-nav-title">@lang('admin.main_list')</li>
             @php  $modules  = \App\Models\Module::get();  @endphp
             @foreach($modules as $mod)
             <li class="side-nav-item dropdown-sidebar-link py-1">
@@ -48,7 +48,7 @@
                                                     <circle cx="8" cy="8" r="3"></circle>
                                                 </svg>
                                             </span>
-                                    <span class="menu-text">@lang('lang.admin.show_all')</span>
+                                    <span class="menu-text">@lang('admin.show_all')</span>
                                 </a>
                             </li>
                             <li class="side-nav-item">
@@ -61,7 +61,7 @@
                                                     <path d="M4 8h8"/>
                                                 </svg>
                                             </span>
-                                    <span class="menu-text">@lang('lang.admin.show_active')</span>
+                                    <span class="menu-text">@lang('admin.show_active')</span>
                                 </a>
                             </li>
                             <li class="side-nav-item">
@@ -75,7 +75,7 @@
                                                     <path d="M3 3L13 13"/>
                                                 </svg>
                                             </span>
-                                    <span class="menu-text">@lang('lang.admin.show_deactive')</span>
+                                    <span class="menu-text">@lang('admin.show_deactive')</span>
                                 </a>
                             </li>
                             <li class="side-nav-item">
@@ -87,7 +87,7 @@
                                                     <path d="M8 4v8M4 8h8"/>
                                                 </svg>
                                             </span>
-                                    <span class="menu-text">@lang('lang.admin.add_new')</span>
+                                    <span class="menu-text">@lang('admin.add_new')</span>
                                 </a>
                             </li>
                         </ul>

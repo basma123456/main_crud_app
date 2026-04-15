@@ -1,7 +1,7 @@
 <div class="col-12"
      @if (Request::segment(3) == 'videos' || Request::segment(3) == 'video') hidden @endif>
     <label for="details"
-           class="form-label">{{ __('backend_lang/custom.details') }}</label>
+           class="form-label">{{ __('admin.details') }}</label>
 
     <div class="card"   >
         <div class="card-body">

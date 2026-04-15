@@ -7,9 +7,9 @@
         <label
             class="form-label">
             @if ($nms[$ii] != 'date')
-                {{ __('backend_lang/custom.' . $nms[$ii]) }}
+                {{ __('admin.' . $nms[$ii]) }}
             @else
-                {{ __('backend_lang/custom.date') }}
+                {{ __('admin.date') }}
             @endif
         </label>
         @php
@@ -47,7 +47,7 @@
                     @if ($nms[$ii] == 'PDF File')
                         <font
                             class="hint">
-                            {{ __('backend_lang/custom.max_10') }}
+                            {{ __('admin.max_10') }}
                             doc,docx,pdf,xlsx,pptx</font>
                         <a href="{{ asset(  $data->$fileVariable) }}"
                            target="_blank">
@@ -57,7 +57,7 @@
                                                                                         src="{{ asset('uploads/add_ex/down.png') }}"
                                                                                         width="30"
                                                                                         height="30"/>
-                                                                                    {{ __('backend_lang/custom.show_file') }}
+                                                                                    {{ __('admin.show_file') }}
                                                                                 </span>
                         </a>
                     @else
@@ -69,8 +69,8 @@
                                 type="file"/>
                             <font
                                 class="hint">
-                                {{ __('backend_lang/custom.max_10') }}
-                                {{-- {{ __('backend_lang/custom.max_2') }} --}}
+                                {{ __('admin.max_10') }}
+                                {{-- {{ __('admin.max_2') }} --}}
                                 {{-- doc,docx,pdf,xlsx,pptx,
                                 jpg,jpeg,png,gif --}}
                             </font>
@@ -81,18 +81,18 @@
                         @if ($type == 'slider')
                             <font
                                 class="hint">
-                                {{ __('backend_lang/custom.max_10') }}
+                                {{ __('admin.max_10') }}
                                 doc,docx,pdf,xlsx</font>
                         @else
                             <font
                                 class="hint">
-                                {{ __('backend_lang/custom.max_10') }}
+                                {{ __('admin.max_10') }}
                                 doc,docx,pdf</font>
                         @endif
                     @elseif($nms[$ii] == 'background')
                         <font
                             class="hint">
-                            {{ __('backend_lang/custom.max_2') }}
+                            {{ __('admin.max_2') }}
                             Best
                             Size
                             960*300
@@ -107,7 +107,7 @@
                         type="file"/>
                     <font
                         class="hint">
-                        {{ __('backend_lang/custom.max_2') }}
+                        {{ __('admin.max_2') }}
                         doc,docx,pdf,xlsx,pptx,
                         jpg,jpeg,png,gif
                     </font>

@@ -95,10 +95,12 @@
 
                         <div class="flex-grow-1">
                             {{--                                <h4 class="header-title text-black"></h4>--}}
-                            @if($data->moduleRelation->have_add=='yes')
-                                <a href="{{ route('admin.posts.create', $data->module ) }}"
-                                   class="header-title text-black">تعديل / إضافة جديد</a>
-                            @endif
+{{--                            @if($data->moduleRelation->have_add=='yes')--}}
+{{--                                <a href="{{ route('admin.posts.create', $data->module ) }}"--}}
+{{--                                   class="header-title text-black">تعديل / إضافة جديد</a>--}}
+{{--                            @endif--}}
+                                 <a
+                                   class="header-title text-black"> @lang('admin.edit') ({{$data->moduleRelation->$name }})</a>
 
                         </div>
 
@@ -116,7 +118,7 @@
                     @foreach($data->postLangs   as $key => $postLang)
 
 
-                        {{$key}}
+{{--                        {{$key}}--}}
                         @if($postLang->lang == 'ar')
                             {{-- AR --}}
                             <div class="container p-4" id="arabicForm"
@@ -130,7 +132,7 @@
                                     <div class="col-md-12">
 
                                         <label for="parname"
-                                               class="form-label">{{ __('backend_lang/custom.title') }}</label>
+                                               class="form-label">{{ __('admin.title') }}</label>
                                         <input type="text" name="parname_rtl"
                                                style="direction: rtl !important"
                                                class="form-control"
@@ -161,9 +163,9 @@
                                     <div class="col-md-6">
                                         <label class="form-label">
                                             @if ($nms[$ii] != 'add_date')
-                                                {{ __('backend_lang/custom.' . $nms[$ii]) }}
+                                                {{ __('admin.' . $nms[$ii]) }}
                                             @else
-                                                {{ __('backend_lang/custom.date') }}
+                                                {{ __('admin.date') }}
                                             @endif
 
                                         </label>
@@ -230,7 +232,7 @@
                                     ?>
                                     <div class="col-12">
                                         <label class="form-label">
-                                            {{ __('backend_lang/custom.' . $nms[$ii]) }}
+                                            {{ __('admin.' . $nms[$ii]) }}
 
                                         </label>
                                         <?php if ($data->moduleRelation->title == 'equipment' || $data->moduleRelation->title == 'workshop') { ?>
@@ -295,7 +297,7 @@
 
                                     <div class="col-md-12">
                                         <label for="pename"
-                                               class="form-label">{{ __('backend_lang/custom.title') }}</label>
+                                               class="form-label">{{ __('admin.title') }}</label>
                                         <input type="text" name="parname"
                                                class="form-control"
                                                value="{{ $postLang->name }}"
@@ -365,9 +367,9 @@
                                     <div class="col-md-6">
                                         <label class="form-label">
                                             @if ($nms[$ii] != 'add_date')
-                                                {{ __('backend_lang/custom.' . $nms[$ii]) }}
+                                                {{ __('admin.' . $nms[$ii]) }}
                                             @else
-                                                {{ __('backend_lang/custom.date') }}
+                                                {{ __('admin.date') }}
                                             @endif
                                         </label>
                                         {{--                                            <div class="col-sm-10 " style="direction:rtl;">--}}
@@ -429,7 +431,7 @@
 
                                     <div class="col-12">
                                         <label class="form-label">
-                                            {{ __('backend_lang/custom.' . $nms[$ii]) }}
+                                            {{ __('admin.' . $nms[$ii]) }}
 
                                         </label>
                                         <?php if ($data->moduleRelation->title == 'equipment' || $data->moduleRelation->title == 'workshop') { ?>

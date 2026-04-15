@@ -13,10 +13,10 @@
                 <div class="card">
                     <div class="card-header border-bottom card-tabs d-flex flex-wrap align-items-center gap-2">
                         <div class="flex-grow-1">
-                            <h4 class="header-title text-black">@lang('lang.admin.add_to_gallery')</h4>
+                            <h4 class="header-title text-black">@lang('admin.add_to_gallery')</h4>
                         </div>
                     </div>
-                    <div id="message" class="alert alert-success" style="display: none">{{__('lang.admin.photo_inserted_successfully')}}</div>
+                    <div id="message" class="alert alert-success" style="display: none">{{__('admin.photo_inserted_successfully')}}</div>
 {{--                    {{$post->id}}--}}
                     <div class="container p-4">
                         <label for="fileInput"
@@ -33,18 +33,16 @@
                                         stroke-linejoin="round"></path>
                                 </g>
                             </svg>
-                            @lang('lang.admin.pull_photos_here_or_press_to_choose_photo')
+                            @lang('admin.pull_photos_here_or_press_to_choose_photo')
                             <input type="file" id="fileInput" accept="image/*" multiple class="form-control d-none">
                         </label>
 
                         <div id="previewArea" class="d-flex flex-wrap gap-2 mb-4"></div>
 
                         <div class="d-flex justify-content-end gap-2 flex-column flex-md-row">
-                            <button id="saveBtn" onclick="pressBtn()" class="btn main-btn save-btn fw-bold fs-6">حفظ
-                                الصورة
-                            </button>
+                            <button id="saveBtn" onclick="pressBtn()" class="btn main-btn save-btn fw-bold fs-6">@lang('admin.save') @lang('admin.image')</button>
                             <a href="{{url(route('admin.posts.gallery' , ['module' => $post->module , 'post' => $post  ]))}}"
-                               class="btn main-btn go-to-gallery-btn fw-bold fs-6">@lang('lang.admin.gallery')</a>
+                               class="btn main-btn go-to-gallery-btn fw-bold fs-6">@lang('admin.gallery')</a>
                         </div>
                     </div>
                 </div>

@@ -62,6 +62,7 @@ Route::group(
     Route::get('posts_order/{module}/{direction}/{post}', [PostController::class, 'changePostOrder'])->name('posts.order');
     Route::get('posts_first_order/{post}', [PostController::class, 'changePostOrderToLastFirst'])->name('post_first_order.post');
     Route::get('delete_post/{post}', [PostController::class, 'delete'])->name('delete_post.post');
+    Route::delete('delete/selected/{module_title}', [PostController::class, 'deleteAlSelected'])->name('delete.selected');
 
 
 

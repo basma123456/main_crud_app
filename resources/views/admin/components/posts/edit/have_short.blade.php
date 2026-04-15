@@ -4,7 +4,7 @@
         {{-- @if (Request::segment(3) == 'videos' || Request::segment(3) == 'video') --}}
         {{-- {{ __('backend_lang/custom.embed_video') }} --}}
         {{-- @else --}}
-        {{ __('backend_lang/custom.short') }}
+        {{ __('admin.short') }}
         {{-- @endif --}}
     </label>
 

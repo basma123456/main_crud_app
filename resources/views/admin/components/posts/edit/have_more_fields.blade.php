@@ -157,7 +157,7 @@
                                 id="customFile"/>
                             <font
                                 class="hint">
-                                {{ __('backend_lang/custom.max_10') }}
+                                {{ __('admin.max_10') }}
                             </font>
                         </div>
                     </div>
@@ -170,7 +170,7 @@
                         name="morefield{{ $morid }}"
                         class="form-control" id="customFile" />
                     <font class="hint">
-                        {{ __('backend_lang/custom.max_10') }}
+                        {{ __('admin.max_10') }}
                     </font>
                 @endif --}}
             @endforeach

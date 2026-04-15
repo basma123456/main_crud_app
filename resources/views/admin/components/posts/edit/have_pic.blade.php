@@ -2,7 +2,7 @@
 
     <div class="col-md-6">
         <label for="enname"
-               class="form-label">{{ __('backend_lang/custom.image') }}</label>
+               class="form-label">{{ __('admin.image') }}</label>
 
         @if ($data->pic)
             <div class="row">
@@ -51,7 +51,7 @@
                             {{ $data->moduleRelation->pic_size }}
                             ,
                         @else
-                            {{ __('backend_lang/custom.max_10') }}
+                            {{ __('admin.max_10') }}
                         @endif
                     </font>
                 </div>
@@ -68,7 +68,7 @@
                 id="customFile"/>
             <font
                 class="hint">
-                {{ __('backend_lang/custom.max_10') }}
+                {{ __('admin.max_10') }}
             </font>
 
         @endif

@@ -6,9 +6,9 @@
     <div class="col-md-6" style="direction:rtl;">
         <label class="form-label">
             @if ($nms[$ii] != 'add_date')
-                {{ __('backend_lang/custom.' . $nms[$ii])  }}
+                {{ __('admin.' . $nms[$ii])  }}
             @else
-                {{ __('backend_lang/custom.date') }}
+                {{ __('admin.date') }}
             @endif
         </label>
         @if ($nms[$ii] != 'add_date')
@@ -34,7 +34,7 @@
     ?>
     <div class="col-12" dir="rtl" style="direction: rtl !important;">
         <label
-            class="form-label"> <?php echo __('backend_lang/custom.' . $nms[$ii]); ?>
+            class="form-label"> <?php echo __('admin.' . $nms[$ii]); ?>
 
         </label>
 
@@ -51,10 +51,10 @@
 @endif
 
 @if($case== 'have_short_arabic')
-    <div class="mb-3 row"
+    <div class="col-12"
          @if ($moduleRow->title == 'videos' || $moduleRow->title == 'video') hidden @endif>
         <label for="details"
-               class="col-sm-2 col-form-label">{{ __('backend_lang/custom.short') }}</label>
+               class="col-sm-2 col-form-label">{{ __('admin.short') }}</label>
 
         <div class="card">
             <div class="card-body">
@@ -72,10 +72,10 @@
 @endif
 
 @if($case=='have_details_arabic')
-    <div class="mb-3 row"
+    <div class="col-12"
          @if ($moduleRow->title == 'videos' || $moduleRow->title == 'video') hidden @endif>
         <label for="details"
-               class="col-sm-2 col-form-label">{{ __('backend_lang/custom.details') }}</label>
+               class="col-sm-2 col-form-label">{{ __('admin.details') }}</label>
 
         <div class="card">
             <div class="card-body">
@@ -93,10 +93,10 @@
 @endif
 
 @if($case =='have_pic')
-    <div class="col-md-6"
+     <div class="col-md-6"
          @if ($moduleRow->title === 'videos'  || $moduleRow->title   == 'video') hidden @endif>
         <label for="file"
-               class="form-label">{{ __('backend_lang/custom.image') }}</label>
+               class="form-label">{{ __('admin.image') }}</label>
 
         {{-- <input name="file" value="" type="hidden" /> --}}
         <input type="file" name="pic"
@@ -106,7 +106,7 @@
             @if ($moduleRow->pic_size)
                 {{ $moduleRow->pic_size }}
             @else
-                {{ __('backend_lang/custom.max_10') }}
+                {{ __('admin.max_10') }}
             @endif
         </font>
     </div>
@@ -120,9 +120,9 @@
     <div class="col-md-6">
         <label class="form-label label_{{$ii}}">
             @if ($nms[$ii] != 'add_date')
-                {{ __('backend_lang/custom.' . $nms[$ii])  }}
+                {{ __("admin." . $nms[$ii])  }}
             @else
-                {{ __('backend_lang/custom.date') }}
+                {{ __('admin.date') }}
             @endif
         </label>
 
@@ -154,7 +154,7 @@
     ?>
     <div class="col-md-12">
         <label
-            class="form-label"> <?php echo __('backend_lang/custom.' . $nms[$ii]); ?>
+            class="form-label"> <?php echo __( 'admin.' . $nms[$ii]); ?>
         </label>
 
         <div class="card">
@@ -186,7 +186,7 @@
             {{-- @if (Request::segment(3) == 'videos' || Request::segment(3) == 'video')
                 {{ __('backend_lang/custom.embed_video') }}
             @else --}}
-            {{ __('backend_lang/custom.short') }}
+            {{ __('admin.short') }}
             {{-- @endif --}}
         </label>
 
@@ -202,12 +202,12 @@
 @endif
 @if($case == 'have_details_english')
 
-    <div class="mb-3 row">
+    <div class="col-12">
         <label for="details" class="col-sm-2 col-form-label">
             @if ($moduleRow->title == 'videos' || $moduleRow->title == 'video')
-                {{ __('backend_lang/custom.embed_video') }}
+                {{ __('admin.embed_video') }}
             @else
-                {{ __('backend_lang/custom.details') }}
+                {{ __('admin.details') }}
             @endif
         </label>
 

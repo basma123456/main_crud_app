@@ -399,12 +399,11 @@ class PostController extends Controller
         /****************settings and logs part***************/
 
         if ($lastInsertID or $postLangs) {
-            return redirect(route('admin.module.show', $request->module))->with('success', __('lang.added_successfully'));
+            return redirect(route('admin.module.show', $request->module))->with('success', __('admin.added_successfully'));
         } else {
-            return back()->with('error', __('lang.error_occured'));
+            return back()->with('error', __('admin.error_occured'));
         }
     }
-
 
     public function changePostOrder($module, $direction, Post $post)
     {
@@ -1024,8 +1023,16 @@ class PostController extends Controller
     public function delete(Post $post)
     {
         $post->delete();
-        return redirect()->back();
+        return redirect()->back()->with('success', __('admin.deleted_successfully'));
     }
 
 
+    public function deleteAlSelected(Request $request, $module_title)
+    {
+        if(empty($request->post_id)){
+            return redirect()->back()->with('error', __('admin.select_posts_first'));
+        }
+        Post::whereIn('id', $request->post_id)->delete();
+        return redirect()->back()->with('success', __('admin.deleted_successfully'));
+    }
 }

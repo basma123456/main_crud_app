@@ -39,14 +39,18 @@
 
 
                 @foreach ($errors->all() as $error)
-                    <div class="alert alert-danger">{{ $error }}</div>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>{{ $error }}</strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                aria-label="Close"></button>
+                    </div>
                 @endforeach
 
                 <div class="card position-relative">
                     <div class="card-header border-bottom card-tabs d-flex flex-wrap align-items-center gap-2">
                         <div class="flex-grow-1">
                                     <span
-                                        class="header-title text-black">  إضافة جديد</span>
+                                        class="header-title text-black">@lang('admin.add_new')</span>
                         </div>
 
 
@@ -77,7 +81,7 @@
 
                             <div class="col-12">
                                 <label for="pename"
-                                       class="form-label">{{ __('backend_lang/custom.title') }}</label>
+                                       class="form-label">@lang('admin.title')</label>
                                 <input type="text" name="parname_rtl" style="direction:rtl "
                                        class="form-control" value="{{old('parname_rtl')}}" id="inputPassword">
                             </div>
@@ -121,31 +125,31 @@
                             <div class="col-6 up">
                                 <label class="form-label">
                                     @if ($nms[$ii] != 'date')
-                                        {{ __('backend_lang/custom.' . $nms[$ii]) }}
+                                        {{ __('admin.' . $nms[$ii]) }}
                                     @else
-                                        {{ __('backend_lang/custom.date') }}
+                                        {{ __('admin.date') }}
                                     @endif
                                 </label>
                                 <input class="form-control" name="up{{ $ii }}"
                                        type="file"/>
                                 <font class="hint">
-                                    {{ __('backend_lang/custom.max_10') }}
+                                    {{ __('admin.max_10') }}
                                 </font>
 
                                 @if ($nms[$ii] == 'PDF File')
 
                                     @if ($type == 'slider')
                                         <font class="hint">
-                                            {{ __('backend_lang/custom.max_10') }}
+                                            {{ __('admin.max_10') }}
                                             doc,docx,pdf,xlsx
                                         </font>
                                     @else
                                         <font class="hint">
-                                            {{ __('backend_lang/custom.max_10') }} doc,docx,pdf
+                                            {{ __('admin.max_10') }} doc,docx,pdf
                                         </font>
                                     @endif
                                 @elseif($nms[$ii] == 'background')
-                                    <font class="hint"> {{ __('backend_lang/custom.max_2') }}
+                                    <font class="hint"> {{ __('admin.max_2') }}
                                         Best Size 960*300
                                         jpg,jpeg,png,gif</font>
 
@@ -170,7 +174,7 @@
                             <div class="col-md-12">
 
                                 <label for="parname"
-                                       class="form-label">{{ __('backend_lang/custom.title') }}</label>
+                                       class="form-label">{{ __('admin.title') }}</label>
                                 <input type="text" name="parname"
                                        class="form-control"
                                        value="{{ old('parname' )}}"
@@ -234,7 +238,7 @@
                 </div>
                 <div class="col-12  d-flex justify-content-end ">
                     <button type="submit"
-                            class="btn btn-primary mt-10">{{ __('backend_lang/custom.save') }}
+                            class="btn btn-primary mt-10">{{ __('admin.save') }}
                     </button>
                 </div>
             </form>

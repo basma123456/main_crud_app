@@ -19,7 +19,7 @@ class PostService
     {
         $query = Post::whereHas('moduleRelation', function ($q) use ($title) {
             $q->where('title', $title);
-        })->with('category');
+        })->with('category', 'postLangsCurrent');
 
         if ($request->search) {
             $query = $query->where(function ($q) use ($request, $title) {
@@ -41,7 +41,7 @@ class PostService
     {
         $query = Post::whereHas('moduleRelation', function ($q) use ($title) {
             $q->where('title', $title);
-        })->with(['category', 'moduleRelation'])->where('active', $status);
+        })->with(['category', 'moduleRelation'  , 'postLangsCurrent'])->where('active', $status);
         if ($request->search) {
             $query = $query->where(function ($q) use ($request, $title) {
                 $q->where('name_en', 'like', '%' . $request->search . '%')->orWhere('name_ar', 'like', '%' . $request->search . '%')->where('module', $title)

@@ -2,9 +2,9 @@
     <label for="details"
            class="form-label">
         @if ($data->moduleRelation->title == 'videos' || $data->moduleRelation->title == 'video')
-            {{ __('backend_lang/custom.embed_video') }}
+            {{ __('admin.embed_video') }}
         @else
-            {{ __('backend_lang/custom.details') }}
+            {{ __('admin.details') }}
         @endif
     </label>
 
