@@ -2,11 +2,11 @@
   if: github.ref == 'refs/heads/master'
   uses: appleboy/ssh-action@master
   with:
-    host: "https://smartv-demo.com/basma_test"
+    host: smartv-demo.com
     username: ${{ secrets.DEPLOY_USER }}
     password: ${{ secrets.DEPLOY_PASSWORD }}
-    script: | 
-      cd path-to-your-laravel-app
+    script: |
+      cd public_html/basma_test
       git pull origin master
       composer install --no-dev --optimize-autoloader
       php artisan migrate --force
