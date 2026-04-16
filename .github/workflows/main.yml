@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy to cPanel via FTP
 
 on:
   push:
@@ -10,15 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Deploy to Production
-        if: github.ref == 'refs/heads/master'
-        uses: appleboy/ssh-action@master
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          host: smartv-demo.com
-          username: ${{ secrets.DEPLOY_USER }}
-          password: ${{ secrets.DEPLOY_PASSWORD }}
-          script: |
-            cd public_html/basma_test
-            git pull origin master
-            composer install --no-dev --optimize-autoloader
-            php artisan migrate --force
+          server: smartv-demo.com
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /public_html/basma_test/
