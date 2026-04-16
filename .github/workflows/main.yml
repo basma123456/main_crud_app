@@ -16,7 +16,9 @@ jobs:
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: smartv-demo.com
+          server: ftp.smartv-demo.com
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /public_html/basma_test/
+          port: 21
+          protocol: ftps
