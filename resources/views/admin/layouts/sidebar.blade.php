@@ -11,16 +11,15 @@
     <div data-simplebar class="sidebar-links">
         <a href="#" class="logo justify-content-center">
                     <span>
-                        <span class="logo-lg"><img src="{{asset('admin/assets/images/imgs/logo-lg.webp')}}" alt="logo"></span>
-                        <span class="logo-sm"><img src="{{asset('admin/assets/images/imgs/logo-sm.webp')}}"
+                        <span class="logo-lg"><img src="{{asset($settings->logo)}}" alt="logo"></span>
+                        <span class="logo-sm"><img src="{{asset($settings->logo)}}"
                                                    alt="small logo"></span>
                     </span>
         </a>
 
-
         <ul class="side-nav gap-0">
             <li class="side-nav-title">@lang('admin.main_list')</li>
-            @php  $modules  = \App\Models\Module::get();  @endphp
+            @php  $modules  = \App\Models\Module::get();    $name = app()->getLocale() == 'ar' ? 'name_ar' : 'name';  @endphp
             @foreach($modules as $mod)
             <li class="side-nav-item dropdown-sidebar-link py-1">
                 <a data-bs-toggle="collapse" href="#{{$mod->title}}" aria-expanded="false" aria-controls="news"
@@ -33,7 +32,7 @@
                                         <path d="M8 14h5"/>
                                     </svg>
                                 </span>
-                    <span class="menu-text">{{$mod->name_ar}}</span>
+                    <span class="menu-text">{{$mod->$name}}</span>
                     <span class="menu-arrow"></span>
                 </a>
                     <div class="sidebar-links-dropdown position-relative collapse" id="{{$mod->title}}">

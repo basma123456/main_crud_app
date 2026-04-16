@@ -30,7 +30,7 @@ class PostService
                     });
             });
         }
-        $posts = $query->with('moduleRelation')->orderBy('p_order', 'desc')->paginate(10)->appends([
+        $posts = $query->with('moduleRelation')->orderBy('p_order', 'desc')->paginate(config('app.pagination_num'))->appends([
             'search' => $request->search
         ]);
 
@@ -52,7 +52,7 @@ class PostService
             });
         }
 
-        $posts = $query->orderBy('p_order', 'desc')->paginate(10)->appends([
+        $posts = $query->orderBy('p_order', 'desc')->paginate(config('app.pagination_num'))->appends([
             'search' => $request->search
         ]);
         return $posts;

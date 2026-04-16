@@ -53,8 +53,7 @@
                     @endif
 
 
-
-                    <button type="submit" form="delete_all_form"   class="btn btn-primary"> delete all </button>
+                    {{--                    <button class="btn btn-primary"> delete all</button>--}}
                     <div class="card-breadcrumb px-3 py-2 shadow-sm">
                         <div class="d-flex align-items-center flex-wrap flex-lg-nowrap gap-2">
 
@@ -72,6 +71,16 @@
                             </div>
 
                             <div class="d-flex align-items-center gap-2 flex-column flex-md-row">
+
+                                <!-----delete checked button------>
+                                <div class="table-dropdown">
+                                    <button class="btn main-btn dropdown-toggle fs-6 text-primary " type="submit"
+                                            id="checkBtn" form="delete_all_form"
+                                            style="display: none; background-color: #1470ad!important; color:white">
+                                        @lang('admin.delete_checked') <i class="ri-delete-back-2-fill"></i>
+                                    </button>
+                                </div>
+                                <!----delete checked button----->
 
                                 <!--------search---------------->
                                 <form
@@ -127,6 +136,7 @@
                                     </ul>
                                 </div>
 
+
                             </div>
 
                         </div>
@@ -149,7 +159,7 @@
 
                                     <th class="ps-3">
                                         <input type="checkbox"
-                                               class="list-pg-check-select-all form-check-input row-select">
+                                               class="list-pg-check-select-all form-check-input row-select check_box_class">
                                     </th>
 
                                     <th scope="col" width="3%">
@@ -179,7 +189,8 @@
                                 <tbody>
 
 
-                                <form action="{{route('admin.delete.selected' , ['module_title' => $module->title])}}" id="delete_all_form" method="post">
+                                <form action="{{route('admin.delete.selected' , ['module_title' => $module->title])}}"
+                                      id="delete_all_form" method="post">
                                     @csrf
                                     @method('delete')
                                     @foreach($posts as $key => $post)
@@ -187,7 +198,7 @@
                                         <tr class="{{$post->active == 'no' ? 'pinkBg' : ''}}">
                                             <td class="ps-3">
                                                 <input type="checkbox" name="post_id[]" value="{{$post->id}}"
-                                                       class="list-pg-check form-check-input row-select">
+                                                       class="list-pg-check form-check-input row-select check_box_class">
 
                                                 <p class="bg-success">id : {{$post->id}}</p><br>
                                                 {{$post->p_order}} <br>
@@ -403,7 +414,50 @@
             window.location.href = url;
         }
 
+
+        // function hideShowCheckBtn(status) {
+        //     const CheckBtn = document.getElementById('checkBtn');
+        //     if (status == true) {
+        //         CheckBtn.style.display = 'block';
+        //     } else {
+        //         CheckBtn.style.display = 'none';
+        //     }
+        // }
+        //
+        // function checkAll() {
+        //     document.querySelectorAll('.check_box_class').forEach((val, key) => {
+        //         if (val.checked === true) {
+        //             return hideShowCheckBtn(true);
+        //         }
+        //     });
+        //     return hideShowCheckBtn(false);
+        //
+        //
+        // }
+        //
+        // $('.check_box_class').change(function () {
+        //     checkAll();
+        // })
+        function hideShowCheckBtn(status) {
+            const CheckBtn = document.getElementById('checkBtn');
+            let btnDisplay;
+            btnDisplay = (status === true) ? 'block' : 'none';
+            CheckBtn.style.display = btnDisplay;
+        }
+
+        function checkAll() {
+            const isAnyChecked = Array.from(document.querySelectorAll('.check_box_class'))
+                .some(val => val.checked);
+
+            hideShowCheckBtn(isAnyChecked);
+        }
+
+        document.querySelectorAll('.check_box_class').forEach(el => {
+            el.addEventListener('change', checkAll);
+        });
+
     </script>
+
 
     <script src="{{asset('admin/js/list.js')}}"></script>
 

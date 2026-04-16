@@ -2,10 +2,12 @@
 
 namespace App\Providers;
 
+use App\Http\Services\Admin\SettingsSingleton;
 use Carbon\CarbonImmutable;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Validation\Rules\Password;
 
@@ -27,6 +29,9 @@ class AppServiceProvider extends ServiceProvider
         $this->configureDefaults();
         Paginator::useBootstrap();
 
+        $settings = SettingsSingleton::getInstance();
+
+        View::share('settings', $settings->getSetting());
     }
 
     /**

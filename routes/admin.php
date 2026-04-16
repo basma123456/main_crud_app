@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\ModuleController;
 use App\Http\Controllers\Admin\PostController;
+use App\Http\Controllers\Admin\RolePermissionController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -63,9 +64,6 @@ Route::group(
     Route::get('posts_first_order/{post}', [PostController::class, 'changePostOrderToLastFirst'])->name('post_first_order.post');
     Route::get('delete_post/{post}', [PostController::class, 'delete'])->name('delete_post.post');
     Route::delete('delete/selected/{module_title}', [PostController::class, 'deleteAlSelected'])->name('delete.selected');
-
-
-
     Route::get('change_status/{post}', [PostController::class, 'changeStatus'])->name('change_status.post');
 
     /******************categories**********/
@@ -75,4 +73,7 @@ Route::group(
     Route::put('categories/update/{module}/{category}', [CategoryController::class, 'update'])->name('cats.update');
 
 
+    /**************roles permissions*********/
+        Route::get('roles-permissions', [RolePermissionController::class, 'index'])->name('roles_permissions_index');
+    /*****************roles permissions*************/
 });

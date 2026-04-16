@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <title>مجموعة الصلاحيات — سمارت فيچن</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="assets/images/imgs/sv-icon.svg">
+    <link href="assets/css/vendor.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/app-rtl.min.css" rel="stylesheet" type="text/css" id="app-style" />
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Custom css -->
+    <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+
+    <!-- Theme Config Js -->
+    <script src="assets/js/config.js"></script>
+</head>
+<body>
+
+<div class="wrapper">
+
+    <div class="sidenav-menu shadow-lg">
+
+        <button class="button-sm-hover">
+            <i class="ri-circle-line align-middle"></i>
+        </button>
+
+
+        <button class="button-close-fullsidebar">
+            <i class="ri-close-line align-middle"></i>
+        </button>
+
+        <div data-simplebar class="sidebar-links">
+            <a href="#" class="logo justify-content-center">
+                    <span>
+                        <span class="logo-lg"><img src="assets/images/imgs/logo-lg.webp" alt="logo"></span>
+                        <span class="logo-sm"><img src="assets/images/imgs/logo-sm.webp" alt="small logo"></span>
+                    </span>
+            </a>
+
+
+            <ul class="side-nav gap-0">
+                <li class="side-nav-title">القائمة الرئيسية</li>
+
+                <li class="side-nav-item dropdown-sidebar-link py-1">
+                    <a data-bs-toggle="collapse" href="#news" aria-expanded="false" aria-controls="news"
+                       class="side-nav-link fw-bold dropdown-menu-link">
+                                <span class="menu-icon me-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 6h16v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6z"/>
+                                        <path d="M8 10h8"/>
+                                        <path d="M8 14h5"/>
+                                    </svg>
+                                </span>
+                        <span class="menu-text">أخبارنا</span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <div class="sidebar-links-dropdown position-relative collapse" id="news">
+                        <ul class="sub-menu">
+                            <li class="side-nav-item">
+                                <a href="list.html" class="side-nav-link">
+                                            <span class="sub-icon me-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <circle cx="8" cy="8" r="3"></circle>
+                                                </svg>
+                                            </span>
+                                    <span class="menu-text">عرض الكل</span>
+                                </a>
+                            </li>
+                            <li class="side-nav-item">
+                                <a href="#" class="side-nav-link">
+                                            <span class="sub-icon me-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M4 8h8"/>
+                                                </svg>
+                                            </span>
+                                    <span class="menu-text">عرض المفعل</span>
+                                </a>
+                            </li>
+                            <li class="side-nav-item">
+                                <a href="#" class="side-nav-link">
+                                            <span class="sub-icon me-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                                     stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M4 8h8"/>
+                                                    <path d="M3 3L13 13"/>
+                                                </svg>
+                                            </span>
+                                    <span class="menu-text">عرض غير المفعل</span>
+                                </a>
+                            </li>
+                            <li class="side-nav-item">
+                                <a href="add.html" class="side-nav-link">
+                                            <span class="sub-icon me-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M8 4v8M4 8h8"/>
+                                                </svg>
+                                            </span>
+                                    <span class="menu-text">إضافة جديد</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="side-nav-item py-1">
+                    <a href="gallery.html" aria-controls="gallery"
+                       class="side-nav-link fw-bold">
+                                <span class="menu-icon me-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <path d="M3 5L6 2h12l3 3"></path>
+                                    </svg>
+                                </span>
+                        <span class="menu-text">معرض الصور</span>
+                    </a>
+                </li>
+
+                <li class="side-nav-item py-1">
+                    <a href="contact-us.html" aria-controls="contact-us"
+                       class="side-nav-link fw-bold">
+                                <span class="menu-icon me-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
+                                        <line x1="3" y1="5" x2="12" y2="12"></line>
+                                        <line x1="21" y1="5" x2="12" y2="12"></line>
+                                    </svg>
+                                </span>
+                        <span class="menu-text">تواصل معنا</span>
+                    </a>
+                </li>
+
+                <li class="side-nav-item py-1">
+                    <a href="settings.html" aria-controls="settings"
+                       class="side-nav-link fw-bold">
+                                <span class="menu-icon me-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                                    </svg>
+                                </span>
+                        <span class="menu-text">الإعدادات</span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+
+    <header class="app-topbar shadow-lg">
+        <div class="page-container topbar-menu">
+            <div class="d-flex align-items-center gap-2">
+
+                <button class="sidenav-toggle-button px-2">
+                    <i class="ri-menu-5-line fs-24"></i>
+                </button>
+
+                <button class="topnav-toggle-button px-2" data-bs-toggle="collapse" data-bs-target="#topnav-menu-content">
+                    <i class="ri-menu-5-line fs-24"></i>
+                </button>
+
+                <div>
+                    <h2 class="logo-title d-none d-md-flex flex-column align-items-start mb-0 gap-0.5">
+                        <span>مسابقات الرماية السنوية</span>
+                        <span>Annual Shooting Competitions</span>
+                    </h2>
+                </div>
+
+            </div>
+
+            <div class="d-flex align-items-center gap-2">
+
+                <div class="topbar-item nav-user">
+                    <div class="dropdown">
+                        <a class="topbar-link dropdown-toggle drop-arrow-none px-2" data-bs-toggle="dropdown"
+                           data-bs-offset="0,25" type="button" aria-haspopup="false" aria-expanded="false">
+                            <img src="assets/images/imgs/profile-avatar.png" width="28" class="rounded-circle me-lg-2 d-flex"
+                                 alt="user-image">
+                            <span class="d-lg-flex flex-column gap-1 d-none mt-1">
+                                        <h5 class="my-0 fs-5">Smart Vision</h5>
+                                    </span>
+                            <i class="header-user-arrow ri-arrow-down-s-line d-none d-lg-block align-middle ms-2 mt-1"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a href="#" class="dropdown-item">
+                                <i class="ri-settings-2-line me-1 fs-6 align-middle"></i>
+                                <span class="align-middle fs-6">الإعدادات</span>
+                            </a>
+
+                            <a href="#" class="dropdown-item d-flex align-items-center gap-1">
+                                <i class="ri-global-line fs-6"></i>
+                                <span class="fs-6">English</span>
+                            </a>
+
+                            <a href="#" class="dropdown-item active fw-semibold text-danger">
+                                <i class="ri-logout-box-line me-1 fs-6 align-middle"></i>
+                                <span class="align-middle fs-6">تسجيل الخروج</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="page-content permissions-pg">
+        <div class="page-container pt-3">
+            <div class="row">
+                <div class="col-12">
+
+                    <div class="card">
+                        <div class="card-header border-bottom card-tabs d-flex flex-wrap align-items-center gap-2">
+                            <div class="flex-grow-1">
+                                <h4 class="header-title text-black">مجموعة الصلاحيات : Super Admin</h4>
+                            </div>
+
+
+                            <div class="table-main-btn mx-auto">
+                                <a href="#" class="btn main-btn contact-us-btn fs-6 d-flex align-items-center gap-1" type="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                         width="16" height="16"
+                                         viewBox="0 0 24 24"
+                                         fill="none"
+                                         stroke="currentColor"
+                                         stroke-width="2"
+                                         stroke-linecap="round"
+                                         stroke-linejoin="round"
+                                         class="back-btn-svg">
+                                        <path d="M5 12h14"></path>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </svg>
+                                    رجوع
+                                </a>
+                            </div>
+                        </div>
+
+
+
+                        <form class="card-body">
+                            <div class="row g-3">
+
+                                <div class="col-12">
+                                    <div class="w-100 border rounded p-3 shadow-lg">
+
+                                        <div class="form-check mb-3 pb-2 collection-head">
+                                            <input class="form-check-input" type="checkbox" id="members">
+                                            <label class="form-check-label ms-2 fw-bold" for="members">
+                                                Members
+                                            </label>
+                                        </div>
+
+                                        <div class="row members-inputs">
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input child" type="checkbox" id="members-edit">
+                                                    <label class="form-check-label ms-2" for="members-edit">تعديل - Edit</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input child" type="checkbox" id="members-delete">
+                                                    <label class="form-check-label ms-2" for="members-delete">حذف - Delete</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input child" type="checkbox" id="members-activation">
+                                                    <label class="form-check-label ms-2" for="members-activation">تفعيل - Activation</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input child" type="checkbox" id="members-show">
+                                                    <label class="form-check-label ms-2" for="members-show">عرض - Show</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="w-100 border rounded p-3 shadow-lg">
+
+                                        <div class="form-check mb-3 pb-2 collection-head">
+                                            <input class="form-check-input" type="checkbox" id="photography-requests">
+                                            <label class="form-check-label ms-2 fw-bold" for="photography-requests">
+                                                Photography Requests
+                                            </label>
+                                        </div>
+
+                                        <div class="row photo-req-inputs">
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input child" type="checkbox" id="photo-req-edit">
+                                                    <label class="form-check-label ms-2" for="photo-req-edit">تعديل - Edit</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input child" type="checkbox" id="photo-req-delete">
+                                                    <label class="form-check-label ms-2" for="photo-req-delete">حذف - Delete</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input child" type="checkbox" id="photo-req-emp-approve">
+                                                    <label class="form-check-label ms-2" for="photo-req-emp-approve">موافقة الموظف - Emp. Approve</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input child" type="checkbox" id="photo-req-manager-approve">
+                                                    <label class="form-check-label ms-2" for="photo-req-manager-approve">موافقة المدير - Manager Approve</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check permissions-inputs-margin-top">
+                                                    <input class="form-check-input child" type="checkbox" id="photo-req-police-approve">
+                                                    <label class="form-check-label ms-2" for="photo-req-police-approve">موافقة أمنية - Police Approve</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check permissions-inputs-margin-top">
+                                                    <input class="form-check-input child" type="checkbox" id="photo-req-payment-confirm">
+                                                    <label class="form-check-label ms-2" for="photo-req-payment-confirm">تأكيد الدفع - Payment Confirm</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="w-100 border rounded p-3 shadow-lg">
+
+                                        <div class="form-check mb-3 pb-2 collection-head">
+                                            <input class="form-check-input" type="checkbox" id="events-requests">
+                                            <label class="form-check-label ms-2 fw-bold" for="events-requests">
+                                                Events Requests
+                                            </label>
+                                        </div>
+
+                                        <div class="row events-req-inputs">
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input child" type="checkbox" id="events-req-edit">
+                                                    <label class="form-check-label ms-2" for="events-req-edit">تعديل - Edit</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input child" type="checkbox" id="events-req-delete">
+                                                    <label class="form-check-label ms-2" for="events-req-delete">حذف - Delete</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input child" type="checkbox" id="events-req-emp-approve">
+                                                    <label class="form-check-label ms-2" for="events-req-emp-approve">موافقة الموظف - Emp. Approve</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input child" type="checkbox" id="events-req-manager-approve">
+                                                    <label class="form-check-label ms-2" for="events-req-manager-approve">موافقة المدير - Manager Approve</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check permissions-inputs-margin-top">
+                                                    <input class="form-check-input child" type="checkbox" id="events-req-police-approve">
+                                                    <label class="form-check-label ms-2" for="events-req-police-approve">موافقة أمنية - Police Approve</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check permissions-inputs-margin-top">
+                                                    <input class="form-check-input child" type="checkbox" id="events-req-payment-confirm">
+                                                    <label class="form-check-label ms-2" for="events-req-payment-confirm">تأكيد الدفع - Payment Confirm</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="w-100 border rounded p-3 shadow-lg">
+
+                                        <div class="form-check mb-3 pb-2 collection-head">
+                                            <input class="form-check-input" type="checkbox" id="facility-requests">
+                                            <label class="form-check-label ms-2 fw-bold" for="facility-requests">
+                                                Facility Requests
+                                            </label>
+                                        </div>
+
+                                        <div class="row facility-req-inputs">
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input child" type="checkbox" id="facility-req-edit">
+                                                    <label class="form-check-label ms-2" for="facility-req-edit">تعديل - Edit</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input child" type="checkbox" id="facility-req-delete">
+                                                    <label class="form-check-label ms-2" for="facility-req-delete">حذف - Delete</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input child" type="checkbox" id="facility-req-complete">
+                                                    <label class="form-check-label ms-2" for="facility-req-complete">تمت المعاملة - Complete</label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="w-100 border rounded p-3 shadow-lg">
+
+                                        <div class="form-check mb-3 pb-2 collection-head">
+                                            <input class="form-check-input" type="checkbox" id="adv-requests">
+                                            <label class="form-check-label ms-2 fw-bold" for="adv-requests">
+                                                Adv Requests
+                                            </label>
+                                        </div>
+
+                                        <div class="row adv-req-inputs">
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input child" type="checkbox" id="adv-req-edit">
+                                                    <label class="form-check-label ms-2" for="adv-req-edit">تعديل - Edit</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input child" type="checkbox" id="adv-req-delete">
+                                                    <label class="form-check-label ms-2" for="adv-req-delete">حذف - Delete</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input child" type="checkbox" id="adv-req-complete">
+                                                    <label class="form-check-label ms-2" for="adv-req-complete">تمت المعاملة - Complete</label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="w-100 border rounded p-3 shadow-lg">
+
+                                        <div class="form-check mb-3 pb-2 collection-head">
+                                            <input class="form-check-input" type="checkbox" id="reports">
+                                            <label class="form-check-label ms-2 fw-bold" for="reports">
+                                                Reports
+                                            </label>
+                                        </div>
+
+                                        <div class="row rpt-inputs">
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input child" type="checkbox" id="payment-report">
+                                                    <label class="form-check-label ms-2" for="payment-report">تقرير المقبوضات - Payment rpt</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input child" type="checkbox" id="vat-report">
+                                                    <label class="form-check-label ms-2" for="vat-report">تقرير Vat rpt</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input child" type="checkbox" id="service-fees-rpt">
+                                                    <label class="form-check-label ms-2" for="service-fees-rpt">تقرير رسوم الخدمة - Service Fees rpt</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input child" type="checkbox" id="poilce-fees-rpt">
+                                                    <label class="form-check-label ms-2" for="poilce-fees-rpt">تقرير الرسوم الأمنية - Poilce Fees rpt</label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="w-100 border rounded p-3 shadow-lg">
+
+                                        <div class="form-check mb-3 pb-2 collection-head">
+                                            <input class="form-check-input" type="checkbox" id="settings">
+                                            <label class="form-check-label ms-2 fw-bold" for="settings">
+                                                Settings
+                                            </label>
+                                        </div>
+
+                                        <div class="row settings-inputs">
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input child" type="checkbox" id="settings-edit">
+                                                    <label class="form-check-label ms-2" for="settings-edit">تعديل - Edit</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="w-100 border rounded p-3 shadow-lg">
+
+                                        <div class="form-check mb-3 pb-2 collection-head">
+                                            <input class="form-check-input" type="checkbox" id="logs">
+                                            <label class="form-check-label ms-2 fw-bold" for="logs">
+                                                LOGS
+                                            </label>
+                                        </div>
+
+                                        <div class="row logs-inputs">
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input child" type="checkbox" id="logs-view">
+                                                    <label class="form-check-label ms-2" for="logs-view">عرض - View</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="w-100 border rounded p-3 shadow-lg">
+
+                                        <div class="form-check mb-3 pb-2 collection-head">
+                                            <input class="form-check-input" type="checkbox" id="users">
+                                            <label class="form-check-label ms-2 fw-bold" for="users">
+                                                Users
+                                            </label>
+                                        </div>
+
+                                        <div class="row users-inputs">
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input child" type="checkbox" id="users-view">
+                                                    <label class="form-check-label ms-2" for="users-view">عرض - View</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input child" type="checkbox" id="users-add">
+                                                    <label class="form-check-label ms-2" for="users-add">إضافة - Add</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input child" type="checkbox" id="users-edit">
+                                                    <label class="form-check-label ms-2" for="users-edit">تعديل - Edit</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input child" type="checkbox" id="users-del">
+                                                    <label class="form-check-label ms-2" for="users-del">حذف - Delete</label>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check permissions-inputs-margin-top">
+                                                    <input class="form-check-input child" type="checkbox" id="users-view-role">
+                                                    <label class="form-check-label ms-2" for="users-view-role">عرض الجروبات - View Role</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check permissions-inputs-margin-top">
+                                                    <input class="form-check-input child" type="checkbox" id="users-add-role">
+                                                    <label class="form-check-label ms-2" for="users-add-role">إضافة جروب - Add Role</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check permissions-inputs-margin-top">
+                                                    <input class="form-check-input child" type="checkbox" id="users-edit-role">
+                                                    <label class="form-check-label ms-2" for="users-edit-role">تعديل جروب - Edit Role</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check permissions-inputs-margin-top">
+                                                    <input class="form-check-input child" type="checkbox" id="users-del-role">
+                                                    <label class="form-check-label ms-2" for="users-del-role">حذف جروب - Delete Role</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="form-check permissions-inputs-margin-top">
+                                                    <input class="form-check-input child" type="checkbox" id="users-role-perm">
+                                                    <label class="form-check-label ms-2" for="users-role-perm">صلاحيات الجروب - Role Permissions</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-12 d-flex justify-content-end gap-2 flex-column flex-md-row">
+                                    <button type="reset" class="btn main-btn edit-btn fw-bold fs-6">تعديل</button>
+                                </div>
+
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer shadow-lg">
+            <div class="page-container">
+                <div class="row">
+                    <div class="copyright col-12 col-md-6 text-center text-md-start text-black">
+                        <a href="https://esmart-vision.com/" target="_blank"><img src="assets/images/imgs/sv-logo.png" class="img-fluid"/></a>
+                        Powered by
+                    </div>
+                    <div class="copyright col-12 col-md-6 d-flex align-items-center text-black justify-content-end">
+                        ALL RIGHT RESERVED <script>document.write(new Date().getFullYear())</script> © SMART VISION — IT SOLUTIONS
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+</div>
+
+
+<script src="assets/js/vendor.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="permissions.js"></script>
+</body>
+
+</html>

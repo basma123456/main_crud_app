@@ -14,8 +14,8 @@
 
             <div>
                 <h2 class="logo-title d-none d-md-flex flex-column align-items-start mb-0 gap-0.5">
-                    <span>مسابقات الرماية السنوية</span>
-                    <span>Annual Shooting Competitions</span>
+                    <span>{{$settings->site_name}}</span>
+                    <span>{{$settings->site_name_ar}}</span>
                 </h2>
             </div>
 
@@ -43,11 +43,12 @@
 
                         <a href="#" class="dropdown-item d-flex align-items-center gap-1">
                             <i class="ri-global-line fs-6"></i>
-                            {{--                            <span class="fs-6">English</span>--}}
+                        {{--                            <span class="fs-6">English</span>--}}
                         <!--------languages----------------->
                             @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
 
-                                <a rel="alternate" hreflang="{{ $localeCode }}" class="{{app()->getLocale() == 'ar' && $localeCode == 'ar' ? 'd-none' : '' }} {{app()->getLocale() == 'en' && $localeCode == 'en' ? 'd-none' : '' }}"
+                                <a rel="alternate" hreflang="{{ $localeCode }}"
+                                   class="{{app()->getLocale() == 'ar' && $localeCode == 'ar' ? 'd-none' : '' }} {{app()->getLocale() == 'en' && $localeCode == 'en' ? 'd-none' : '' }}"
                                    href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
                                     {{ $properties['native'] }}
                                 </a>

@@ -813,3 +813,143 @@ footer img {
     justify-content: center !important;
   }
 }
+
+
+
+/**************************permissions***********/
+/* Permissions Page */
+
+.permissions-pg .back-btn-svg {
+    margin-top: 3px;
+}
+
+.permissions-pg .collection-head {
+    border-bottom: 1px solid #dfdfdf !important;
+}
+
+/* Footer */
+
+footer {
+    background: linear-gradient(to bottom, #ffffff 0%, #f3f3f3 30%, #d9d9d9 100%);
+}
+
+footer .copyright {
+    font-size: 10px;
+}
+
+
+footer img {
+    width: 90px;
+    margin-bottom: -1px;
+}
+
+.footer .footer-links a {
+    margin-right: 0;
+    font-size: 10px;
+}
+
+.footer .footer-links a:not(:last-child) {
+    margin-left: 6px;
+}
+
+@keyframes move-down {
+    0%, 100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+}
+@keyframes zoom-in {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes colorize {
+    0% {
+        background: var(--main-color);
+    }
+    50% {
+        background: var(--main-color-hover);
+    }
+    100% {
+        background: var(--main-color);
+    }
+}
+
+@keyframes ripple {
+    0% {
+        outline: 0em solid transparent;
+        outline-offset: -0.1em;
+    }
+    50% {
+        outline: 0.2em solid var(--main-color);
+        outline-offset: 0.2em;
+    }
+    100% {
+        outline: 0.4em solid transparent;
+        outline-offset: 0.4em;
+    }
+}
+
+@keyframes zooming {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .app-topbar .dropdown .dropdown-menu {
+        width: fit-content !important;
+        right: 10px !important;
+        left: 10px !important;
+        margin-right: auto !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .auth-container {
+        width: 100% !important;
+        flex-direction: column-reverse;
+    }
+    .auth-bg::before {
+        display: none;
+    }
+    .text-color-black {
+        color: black !important;
+    }
+    .auth-container > div {
+        width: 100% !important;
+    }
+    .auth-container div:last-child {
+        border-bottom: 1px solid #80808021;
+    }
+    footer .copyright:last-child {
+        justify-content: center !important;
+    }
+}
+
+@media (max-width: 1023px) {
+    .permissions-pg .row .form-check:not(.collection-head) {
+        margin-top: 10px;
+    }
+}

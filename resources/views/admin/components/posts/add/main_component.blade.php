@@ -59,14 +59,14 @@
         <div class="card">
             <div class="card-body">
                 <div class="editor_ar"
-                     data-target="have_short{{$moduleRow->id}}">{{__(old('short_ar'))}}</div>
+                     data-target="have_short{{$moduleRow->id}}">{!! old('short_ar') !!} </div>
             </div>
         </div>
 
 
         <div class="col-sm-10 d-none">
                                         <textarea id="have_short{{$moduleRow->id}}"
-                                                  name="short_ar">{{__(old('short_ar'))}}</textarea>
+                                                  name="short_ar">{!!  old('short_ar')!!}</textarea>
         </div>
     </div>
 @endif
@@ -80,14 +80,14 @@
         <div class="card">
             <div class="card-body">
                 <div class="editor_ar"
-                     data-target="details_ar{{$moduleRow->id}}">{{__(old('details_ar'))}}</div>
+                     data-target="details_ar{{$moduleRow->id}}">{!! old('details_ar')  !!}</div>
             </div>
         </div>
 
 
         <div class="col-sm-10 d-none">
                                         <textarea id="details_ar{{$moduleRow->id}}"
-                                                  name="details_ar">{{__(old('details_ar'))}}</textarea>
+                                                  name="details_ar">{!! old('details_ar') !!}</textarea>
         </div>
     </div>
 @endif

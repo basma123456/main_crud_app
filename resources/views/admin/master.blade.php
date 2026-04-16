@@ -7,10 +7,22 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <body>
 <div class="wrapper">
-    @include('admin.layouts.sidebar')
-    @include('admin.layouts.navbar')
+    @php
+        if(app()->getLocale() == 'ar'){
+            $site_name =  'site_name_ar';
+            $name = 'name_ar';
+
+        }else{
+            $site_name =  'site_name';
+            $name = 'name';
+        }
+    @endphp
+
+
+    @include('admin.layouts.sidebar' , ['name' => $name , 'site_name' => $site_name])
+    @include('admin.layouts.navbar', ['name' => $name , 'site_name' => $site_name])
     <div class="page-content @yield('page_class' , 'add-pg')">
-    @yield('content')
+        @yield('content')
         @if(session('success') || session('msg') || session('error'))
             <script>
                 document.addEventListener("DOMContentLoaded", function () {
@@ -32,7 +44,7 @@
         @endif
 
 
-        <!----------------part of alerts ---------->
+    <!----------------part of alerts ---------->
         <div class="d-none">
             <div class="col-lg-6">
                 <div class="card">
