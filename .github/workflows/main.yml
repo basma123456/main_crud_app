@@ -1,0 +1,26 @@
+name: Deploy to cPanel via FTP
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5 
+        with:
+          server: ftp.smartv-demo.com
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: public_html/smartv-demo.com/basma_test/
+          port: 21
+          protocol: ftps
+          dangerous-clean-slate: false
+          timeout: 60000
