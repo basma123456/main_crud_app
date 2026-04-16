@@ -19,6 +19,6 @@ jobs:
           server: ftp.smartv-demo.com
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: public_html/smartv-demo.com/basma_test
+          server-dir: public_html/smartv-demo.com/basma_test/
           port: 21
           protocol: ftps
