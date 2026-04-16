@@ -1,12 +1,24 @@
-- name: Deploy to Production
-  if: github.ref == 'refs/heads/master'
-  uses: appleboy/ssh-action@master
-  with:
-    host: smartv-demo.com
-    username: ${{ secrets.DEPLOY_USER }}
-    password: ${{ secrets.DEPLOY_PASSWORD }}
-    script: |
-      cd public_html/basma_test
-      git pull origin master
-      composer install --no-dev --optimize-autoloader
-      php artisan migrate --force
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to Production
+        if: github.ref == 'refs/heads/master'
+        uses: appleboy/ssh-action@master
+        with:
+          host: smartv-demo.com
+          username: ${{ secrets.DEPLOY_USER }}
+          password: ${{ secrets.DEPLOY_PASSWORD }}
+          script: |
+            cd public_html/basma_test
+            git pull origin master
+            composer install --no-dev --optimize-autoloader
+            php artisan migrate --force
