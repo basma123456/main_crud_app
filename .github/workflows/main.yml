@@ -1,0 +1,12 @@
+- name: Deploy to Production
+  if: github.ref == 'refs/heads/master'
+  uses: appleboy/ssh-action@master
+  with:
+    host: "https://smartv-demo.com/basma_test"
+    username: ${{ secrets.DEPLOY_USER }}
+    password: ${{ secrets.DEPLOY_PASSWORD }}
+    script: | 
+      cd path-to-your-laravel-app
+      git pull origin master
+      composer install --no-dev --optimize-autoloader
+      php artisan migrate --force
